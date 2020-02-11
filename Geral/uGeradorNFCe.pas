@@ -4,7 +4,7 @@ interface
 
 uses Uni, ACBrNFe, System.Math, System.SysUtils, System.StrUtils,
   System.Classes, pcnConversao, AcbrUtil, ACBrNFeDANFeRLClass, DateUtils, Vcl.Dialogs,
-  pcnRetConsReciDFe, pcnConversaoNFe, pcnNFe, ACBrDANFCeFortesFr, Winapi.Messages, ACBrDFeSSL;
+  pcnRetConsReciDFe, pcnConversaoNFe, pcnNFe, ACBrDANFCeFortesFr, Winapi.Messages,ACBrDFeUtil, ACBrDFeSSL;
 
 type TNFCe = Class(TACBrNFe)
   public
@@ -1261,6 +1261,7 @@ begin
     with FACBrNFe.NotasFiscais.Add.NFe do
     begin
       Ide.cNF := numero_nfce;
+      //Ide.cNF := GerarCodigoDFe(numero_nfce);
       // Caso não seja preenchido será gerado um número aleatório pelo componente
       Ide.natOp := 'VENDA';
       Ide.modelo := 65;

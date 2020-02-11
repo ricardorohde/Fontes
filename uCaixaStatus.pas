@@ -490,6 +490,7 @@ type
     qrCaixacaixinha_entregador: TFloatField;
     Label37: TLabel;
     DBText37: TDBText;
+    AdvGlowButton1: TAdvGlowButton;
     constructor Create(sender: tcomponent);
     procedure FiltraCaixaData;
     procedure dtpDataInicialChange(Sender: TObject);
@@ -528,6 +529,7 @@ type
     procedure ImprimeRelatorioResumidoCaixa;
     procedure detalhado1Click(Sender: TObject);
     procedure resumido1Click(Sender: TObject);
+    procedure AdvGlowButton1Click(Sender: TObject);
   private
     { Private declarations }
       sCamImpCaixa,consulta_caixa: string;
@@ -1252,6 +1254,13 @@ end;
 procedure TfrmCaixaStatus.btRelAcrescimosPorUsuarioClick(Sender: TObject);
 begin
   AbreRelatorio(qrRelAcrescimosVendasPorUsuario,repAcrescimosVendasPorUsuario);
+end;
+
+procedure TfrmCaixaStatus.AdvGlowButton1Click(Sender: TObject);
+begin
+RepCAIXA.LoadFromFile('C:\EliteFood\Relatorios\CAIXARESUMO.fr3');
+RepCAIXA.PrepareReport;
+RepCAIXA.ShowReport;
 end;
 
 procedure TfrmCaixaStatus.AdvGlowButton2Click(Sender: TObject);

@@ -29,7 +29,8 @@ uses
   dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
   dxSkinTheAsphaltWorld, dxSkinValentine, dxSkinVisualStudio2013Blue,
   dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, dxSkinVS2010,
-  dxSkinWhiteprint, dxSkinXmas2008Blue, ACBrTEFDClass, ACBrBase, ACBrValidador;
+  dxSkinWhiteprint, dxSkinXmas2008Blue, ACBrTEFDClass, ACBrBase, ACBrValidador,
+  Vcl.Buttons, frxDesgn;
 
 type
   TfrmPDVFechamento = class(TForm)
@@ -311,6 +312,8 @@ type
     ActionList2: TActionList;
     Action1: TAction;
     Action2: TAction;
+    frxDesigner1: TfrxDesigner;
+    btn1: TBitBtn;
     constructor Create (Sender : TComponent ; id_venda: integer; modo_devolucao_pdv : boolean = false; valor_devolucao : double =0 ); reintroduce;
     procedure CalculaValorPago(flag_outros : boolean = false);
     procedure cdsVendaCalcFields(DataSet: TDataSet);
@@ -370,6 +373,7 @@ type
     procedure chamaTef(cnpjCred, bandeira, campo, numVenda : string; valorInformado : currency);
     procedure Action1Execute(Sender: TObject);
     procedure Action2Execute(Sender: TObject);
+    procedure btn1Click(Sender: TObject);
   private
     { Private declarations }
     b_calcular, permite_desconto, utiliza_painel_senha,
@@ -613,6 +617,7 @@ begin
       else
         RepFechaConta.Variables['sAcrescimo'] := QuotedStr(FormatFloat('###,###,##0.00', cdsVenda.FieldByName('acrescimo').asFloat));
 
+      RepFechaConta.LoadFromFile('C:\EliteFood\Relatorios\FECHAMENTO_PDV.fr3');
       RepFechaConta.PrepareReport;
       for i := 1 to numero_vias do RepFechaConta.Print;
     end;
@@ -1612,6 +1617,12 @@ begin
   if bsat then
     ckImprimirCupom.Checked:= False;
 
+end;
+
+procedure TfrmPDVFechamento.btn1Click(Sender: TObject);
+begin
+RepFechaConta.LoadFromFile('C:\EliteFood\Relatorios\FECHAMENTO_PDV.fr3');
+RepFechaConta.DesignReporT;
 end;
 
 procedure TfrmPDVFechamento.Button1Click(Sender: TObject);

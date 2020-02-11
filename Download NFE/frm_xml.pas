@@ -179,20 +179,20 @@ var
   sPdfPath: String;
   sPathPdf: String;
 begin
-  dtmxml.xmlnfe.First;
+ dtmxml.xmlnfe.First;
   while not dtmxml.xmlnfe.EOF do
   begin
      with dtmxml.ACBrNFe do
      begin
-        sXmlPath := PathWithDelim(Configuracoes.Arquivos.DownloadNFe.PathDownload) +
-                    PathWithDelim(FormatDateTime('YYYYMM', dtmxml.xmlnfe.FieldByName('dhEmi').AsDateTime)) +
-                    dtmxml.xmlnfe.FieldByName('chNFe').AsString + '-nfe.xml';
+        //sXmlPath := PathWithDelim(Configuracoes.Arquivos.DownloadNFe.PathDownload) +
+        //            PathWithDelim(FormatDateTime('YYYYMM', dtmxml.xmlnfe.FieldByName('dhEmi').AsDateTime)) +
+          //          dtmxml.xmlnfe.FieldByName('chNFe').AsString + '-nfe.xml';
         if FileExists(sXmlPath) then
         begin
            // Gera Danfe em PDF
-           sPdfPath := PathWithDelim(Configuracoes.Arquivos.DownloadNFe.PathDownload) +
-                       PathWithDelim(FormatDateTime('YYYYMM', dtmxml.xmlnfe.FieldByName('dhEmi').AsDateTime)) +
-                       dtmxml.xmlnfe.FieldByName('chNFe').AsString + '-nfe.pdf';
+          // sPdfPath := PathWithDelim(Configuracoes.Arquivos.DownloadNFe.PathDownload) +
+           //            PathWithDelim(FormatDateTime('YYYYMM', dtmxml.xmlnfe.FieldByName('dhEmi').AsDateTime)) +
+           //            dtmxml.xmlnfe.FieldByName('chNFe').AsString + '-nfe.pdf';
            if not FileExists(sPdfPath) then
            begin
               if FileExists(sXmlPath)then
@@ -265,9 +265,9 @@ begin
       begin
         // Checa se o arquivo xml da chave manisfestada, já foi baixada
         // caso exista, muda a tag do banco informando que o xml já está na pasta.
-        sXmlPath := PathWithDelim(Configuracoes.Arquivos.DownloadNFe.PathDownload) +
-                    PathWithDelim(FormatDateTime('YYYYMM', dtmxml.xmldfe.FieldByName('dhEmi').AsDateTime)) +
-                    dtmxml.xmldfe.FieldByName('chNFe').AsString + '-nfe.xml';
+        //sXmlPath := PathWithDelim(Configuracoes.Arquivos.DownloadNFe.PathDownload) +
+             //       PathWithDelim(FormatDateTime('YYYYMM', dtmxml.xmldfe.FieldByName('dhEmi').AsDateTime)) +
+               //     dtmxml.xmldfe.FieldByName('chNFe').AsString + '-nfe.xml';
         if FileExists(sXmlPath) then
         begin
           with dtmxml.ACBrNFe do
@@ -294,9 +294,9 @@ begin
           end;
         end;
         // Gera Danfe em PDF
-        sPdfPath := PathWithDelim(Configuracoes.Arquivos.DownloadNFe.PathDownload) +
-                    PathWithDelim(FormatDateTime('YYYYMM', dtmxml.xmldfe.FieldByName('dhEmi').AsDateTime)) +
-                    dtmxml.xmldfe.FieldByName('chNFe').AsString + '-nfe.pdf';
+         //sPdfPath := PathWithDelim(Configuracoes.Arquivos.DownloadNFe.PathDownload) +
+                //    PathWithDelim(FormatDateTime('YYYYMM', dtmxml.xmldfe.FieldByName('dhEmi').AsDateTime)) +
+                //    dtmxml.xmldfe.FieldByName('chNFe').AsString + '-nfe.pdf';
         if not FileExists(sPdfPath) then
         begin
           with dtmxml.ACBrNFe do
@@ -463,7 +463,7 @@ begin
   sPathEXE := ExtractFilePath(Application.ExeName);
   with dtmxml.ACBrNFe.Configuracoes.Arquivos do
   begin
-    DownloadNFe.PathDownload := sPathEXE + 'ImportacaoNfe\';    //
+    //DownloadNFe.PathDownload := sPathEXE + 'ImportacaoNfe\';    //
     PathEvento  := sPathEXE + 'ImportacaoNfe\Eventos\';
     PathInu     := sPathEXE + 'ImportacaoNfe\Inu\';
     PathNFe     := sPathEXE + 'ImportacaoNfe\NFe\';
@@ -527,9 +527,9 @@ begin
       begin
         // Checa se o arquivo xml da chave manisfestada, já foi baixada
         // caso exista, muda a tag do banco informando que o xml já está na pasta.
-        sXmlPath := PathWithDelim(Configuracoes.Arquivos.DownloadNFe.PathDownload) +
-                    PathWithDelim(FormatDateTime('YYYYMM', dtmxml.xmldfe.FieldByName('dhEmi').AsDateTime)) +
-                    dtmxml.xmldfe.FieldByName('chNFe').AsString + '-nfe.xml';
+       // sXmlPath := PathWithDelim(Configuracoes.Arquivos.DownloadNFe.PathDownload) +
+        //            PathWithDelim(FormatDateTime('YYYYMM', dtmxml.xmldfe.FieldByName('dhEmi').AsDateTime)) +
+          //          dtmxml.xmldfe.FieldByName('chNFe').AsString + '-nfe.xml';
         if FileExists(sXmlPath) then
         begin
           with dtmxml.ACBrNFe do
@@ -556,9 +556,9 @@ begin
           end;
         end;
         // Gera Danfe em PDF
-        sPdfPath := PathWithDelim(Configuracoes.Arquivos.DownloadNFe.PathDownload) +
-                    PathWithDelim(FormatDateTime('YYYYMM', dtmxml.xmldfe.FieldByName('dhEmi').AsDateTime)) +
-                    dtmxml.xmldfe.FieldByName('chNFe').AsString + '-nfe.pdf';
+       // sPdfPath := PathWithDelim(Configuracoes.Arquivos.DownloadNFe.PathDownload) +
+       //             PathWithDelim(FormatDateTime('YYYYMM', dtmxml.xmldfe.FieldByName('dhEmi').AsDateTime)) +
+                 //   dtmxml.xmldfe.FieldByName('chNFe').AsString + '-nfe.pdf';
         if not FileExists(sPdfPath) then
         begin
           with dtmxml.ACBrNFe do
@@ -857,9 +857,9 @@ var
 begin
   with dtmxml.ACBrNFe do
   begin
-    sXmlPath := PathWithDelim(Configuracoes.Arquivos.DownloadNFe.PathDownload) +
-                PathWithDelim(FormatDateTime('YYYYMM', dtmxml.xmlnfe.FieldByName('dhEmi').AsDateTime)) +
-                dtmxml.xmlnfe.FieldByName('chNFe').AsString + '-nfe.xml';
+    //sXmlPath := PathWithDelim(Configuracoes.Arquivos.DownloadNFe.PathDownload) +
+      //          PathWithDelim(FormatDateTime('YYYYMM', dtmxml.xmlnfe.FieldByName('dhEmi').AsDateTime)) +
+       //         dtmxml.xmlnfe.FieldByName('chNFe').AsString + '-nfe.xml';
     if FileExists(sXmlPath)then
     begin
       NotasFiscais.Clear;

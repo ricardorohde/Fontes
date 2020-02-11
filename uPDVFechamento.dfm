@@ -55,8 +55,6 @@ object frmPDVFechamento: TfrmPDVFechamento
     StatusBar.Font.Name = 'Tahoma'
     StatusBar.Font.Style = []
     Text = ''
-    ExplicitLeft = -16
-    ExplicitTop = 272
     DesignSize = (
       878
       680)
@@ -997,9 +995,9 @@ object frmPDVFechamento: TfrmPDVFechamento
       ParentFont = False
     end
     object DBText6: TDBText
-      Left = 719
+      Left = 734
       Top = 81
-      Width = 137
+      Width = 122
       Height = 39
       Alignment = taRightJustify
       AutoSize = True
@@ -1013,9 +1011,9 @@ object frmPDVFechamento: TfrmPDVFechamento
       ParentFont = False
     end
     object DBText1: TDBText
-      Left = 719
+      Left = 734
       Top = 213
-      Width = 137
+      Width = 122
       Height = 39
       Alignment = taRightJustify
       AutoSize = True
@@ -1029,9 +1027,9 @@ object frmPDVFechamento: TfrmPDVFechamento
       ParentFont = False
     end
     object DBText2: TDBText
-      Left = 719
+      Left = 734
       Top = 351
-      Width = 137
+      Width = 122
       Height = 39
       Alignment = taRightJustify
       AutoSize = True
@@ -1185,7 +1183,6 @@ object frmPDVFechamento: TfrmPDVFechamento
       Font.Style = []
       HasMinValue = True
       ParentFont = False
-      ReadOnly = True
       TabOrder = 2
       OnEnter = edValorPagamento1Enter
       DataConnector.DataSource = jvdsVenda
@@ -1215,7 +1212,6 @@ object frmPDVFechamento: TfrmPDVFechamento
       Font.Style = []
       HasMinValue = True
       ParentFont = False
-      ReadOnly = True
       TabOrder = 5
       OnEnter = edValorPagamento2Enter
       DataConnector.DataSource = jvdsVenda
@@ -1245,7 +1241,6 @@ object frmPDVFechamento: TfrmPDVFechamento
       Font.Style = []
       HasMinValue = True
       ParentFont = False
-      ReadOnly = True
       TabOrder = 8
       OnEnter = edValorPagamento3Enter
       DataConnector.DataSource = jvdsVenda
@@ -1271,7 +1266,6 @@ object frmPDVFechamento: TfrmPDVFechamento
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
-      ReadOnly = True
       TabOrder = 0
       OnExit = edDescontoValorExit
       DataConnector.DataSource = jvdsVenda
@@ -1535,6 +1529,42 @@ object frmPDVFechamento: TfrmPDVFechamento
       ParentFont = False
       TabOrder = 19
       Visible = False
+    end
+    object btn1: TBitBtn
+      Left = 12
+      Top = 641
+      Width = 62
+      Height = 25
+      Caption = 'Editar'
+      Glyph.Data = {
+        36030000424D3603000000000000360000002800000010000000100000000100
+        18000000000000030000C40E0000C40E00000000000000000000FFFFFFFFFFFF
+        FFFFFFFFFFFF1742592A61884B89BD6FA8CCE3EDF5FFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF2D668493C6F890C8F840
+        84C8266AADD8E6F2FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        F3F3F3C5C5C54288A9DFF1FE5399D71979BD4897C43D83BCA7B5C2F4F4F4FFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFE5E5E5A8A8A8CDCDCD9BB9CD79B5D48FB6D054
+        C8E35ADEF477CFEC4A96D688939DE6E6E6FFFFFFFFFFFFFFFFFFFFFFFFAFAFAF
+        DDDDDDF2F2F2DADADA95B7C874B8D5C1F5FC62DEF65CE1F778D2EF4796D98892
+        9CFFFFFFFFFFFFFFFFFFFFFFFFB2B2B2EFEFEFDDDDDDD3D3D3D1D1D198BDCE76
+        CAE6C6F6FC5DDBF459E0F67AD3F04694D7D6E7F7FFFFFFFFFFFFFFFFFFB4B4B4
+        F1F1F1E1E1E1D7D7D7D4D4D4DBDBDBA3CBD878D2EDC6F6FC5EDBF45AE1F679D5
+        F150A1E1DCE9F5FFFFFFFFFFFFB6B6B6F2F2F2E6E6E6DCDCDCD8D8D8DFDFDFDA
+        DADA96BFCC7BD3EDC3F5FC6BDCF56CC9EC62A2D668A2D4E5EFF7FFFFFFB7B7B7
+        F3F3F3E9E9E9E0E0E0DCDCDCE2E2E2DDDDDDC8C8C888B9C87FD3ECB1E2F88ABF
+        E6ADD2F5C3DFFB6AA1D3FFFFFFB9B9B9F4F4F4EDEDEDE5E5E5E1E1E1E5E5E5E0
+        E0E0CCCCCCC1C1C188BDCD76BDE6B3D1EFE4F2FEABD1EE5895CBFFFFFFBABABA
+        F5F5F5EAEAEADDDDDDD5D5D5D4D4D4D0D0D0C2C2C2BBBBBBBFBFBFAAD3E257A4
+        D784B0DA459CCFB0D8EEFFFFFFBCBCBCF6F6F6E6E6E6EEEEEEF5F5F5FAFAFAF9
+        F9F9EFEFEFDDDDDDC2C2C2E5E5E5ABABABFFFFFFFFFFFFFFFFFFFFFFFFBEBEBE
+        F7F7F7FDFDFDFEFEFEFEFEFEFEFEFEFEFEFEFEFEFEFEFEFEFAFAFAE9E9E9ADAD
+        ADFFFFFFFFFFFFFFFFFFFFFFFFCBCBCBE0E0E0FDFDFDFEFEFEFEFEFEFEFEFEFE
+        FEFEFEFEFEFEFEFEFAFAFACECECEC8C8C8FFFFFFFFFFFFFFFFFFFFFFFFF4F4F4
+        C6C6C6CFCFCFE7E7E7F2F2F2FCFCFCFBFBFBECECECDFDFDFC1C1C1C0C0C0F6F6
+        F6FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFDFDE8E8E8CFCFCFC3C3C3B7B7B7B7
+        B7B7C2C2C2CCCCCCE9E9E9FEFEFEFFFFFFFFFFFFFFFFFFFFFFFF}
+      TabOrder = 20
+      OnClick = btn1Click
     end
   end
   object qrVenda: TUniQuery
@@ -1823,6 +1853,7 @@ object frmPDVFechamento: TfrmPDVFechamento
     Top = 8
   end
   object cdsVenda: TClientDataSet
+    Active = True
     Aggregates = <>
     AutoCalcFields = False
     Params = <>
@@ -2379,7 +2410,7 @@ object frmPDVFechamento: TfrmPDVFechamento
     Top = 16
   end
   object RepFechaConta: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -2388,14 +2419,14 @@ object frmPDVFechamento: TfrmPDVFechamento
     PrintOptions.PrintOnSheet = 0
     PrintOptions.ShowDialog = False
     ReportOptions.CreateDate = 41784.595344467600000000
-    ReportOptions.LastChange = 43194.643922650470000000
+    ReportOptions.LastChange = 43817.756333159700000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
       ''
       'end.')
-    Left = 106
-    Top = 396
+    Left = 154
+    Top = 388
     Datasets = <
       item
         DataSet = dbCreceberFiado
@@ -2444,15 +2475,15 @@ object frmPDVFechamento: TfrmPDVFechamento
       end
       item
         Name = 'sNomeOperador'
-        Value = ''
+        Value = Null
       end
       item
         Name = 'sLabelComanda'
-        Value = ''
+        Value = Null
       end
       item
         Name = 'sNroComanda'
-        Value = ''
+        Value = Null
       end>
     Style = <>
     object Data: TfrxDataPage
@@ -2460,7 +2491,7 @@ object frmPDVFechamento: TfrmPDVFechamento
       Width = 1000.000000000000000000
     end
     object Page1: TfrxReportPage
-      PaperWidth = 80.000000000000000000
+      PaperWidth = 58.000000000000000000
       PaperHeight = 448.000000000000000000
       PaperSize = 256
       LeftMargin = 4.000000000000000000
@@ -2477,15 +2508,15 @@ object frmPDVFechamento: TfrmPDVFechamento
         Height = 115.653555510000000000
         ParentFont = False
         Top = 18.897650000000000000
-        Width = 275.905690000000000000
+        Width = 192.756030000000000000
         object Memo1: TfrxMemoView
-          Left = 3.779527559055118000
+          Left = 3.779527560000000000
           Top = 3.779530000000001000
-          Width = 241.889920000000000000
+          Width = 185.196970000000000000
           Height = 26.456710000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -8
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           HAlign = haCenter
@@ -2495,9 +2526,9 @@ object frmPDVFechamento: TfrmPDVFechamento
           ParentFont = False
         end
         object Memo2: TfrxMemoView
-          Left = 3.779527559055118000
+          Left = 3.779527560000000000
           Top = 33.118120000000000000
-          Width = 226.771800000000000000
+          Width = 185.196970000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -2509,7 +2540,7 @@ object frmPDVFechamento: TfrmPDVFechamento
           ParentFont = False
         end
         object Memo3: TfrxMemoView
-          Left = 173.858380000000000000
+          Left = 124.504020000000000000
           Top = 48.236239999999990000
           Width = 64.252010000000000000
           Height = 15.118120000000000000
@@ -2523,9 +2554,9 @@ object frmPDVFechamento: TfrmPDVFechamento
           ParentFont = False
         end
         object Memo4: TfrxMemoView
-          Left = 3.779527559055118000
+          Left = 3.779527560000000000
           Top = 48.236239999999990000
-          Width = 166.299320000000000000
+          Width = 120.944960000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -2537,9 +2568,9 @@ object frmPDVFechamento: TfrmPDVFechamento
           ParentFont = False
         end
         object Memo5: TfrxMemoView
-          Left = 3.779527559055118000
+          Left = 3.779527560000000000
           Top = 63.354360000000000000
-          Width = 226.771800000000000000
+          Width = 185.196970000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -2551,7 +2582,7 @@ object frmPDVFechamento: TfrmPDVFechamento
           ParentFont = False
         end
         object Memo6: TfrxMemoView
-          Left = 3.779527559055118000
+          Left = 3.779527560000000000
           Top = 78.472480000000000000
           Width = 30.236240000000000000
           Height = 15.118120000000000000
@@ -2565,9 +2596,9 @@ object frmPDVFechamento: TfrmPDVFechamento
           ParentFont = False
         end
         object Memo7: TfrxMemoView
-          Left = 31.574830000000000000
+          Left = 37.574830000000000000
           Top = 78.472480000000000000
-          Width = 196.535560000000000000
+          Width = 151.181200000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -2601,7 +2632,7 @@ object frmPDVFechamento: TfrmPDVFechamento
           ParentFont = False
         end
         object Memo21: TfrxMemoView
-          Left = 3.779527559055118000
+          Left = 3.779527559055120000
           Top = 96.653555510000000000
           Width = 41.574830000000000000
           Height = 15.118120000000000000
@@ -2615,7 +2646,7 @@ object frmPDVFechamento: TfrmPDVFechamento
           ParentFont = False
         end
         object Memo9: TfrxMemoView
-          Left = 139.401670000000000000
+          Left = 94.826840000000000000
           Top = 96.755905510000000000
           Width = 41.574830000000000000
           Height = 15.118120000000000000
@@ -2629,7 +2660,7 @@ object frmPDVFechamento: TfrmPDVFechamento
           ParentFont = False
         end
         object dbPedidonumero_cupom: TfrxMemoView
-          Left = 181.196928500000000000
+          Left = 140.401628500000000000
           Top = 96.755905510000000000
           Width = 49.133890000000000000
           Height = 15.118120000000000000
@@ -2650,12 +2681,12 @@ object frmPDVFechamento: TfrmPDVFechamento
         FillType = ftBrush
         Height = 15.118110240000000000
         Top = 786.142240000000000000
-        Width = 275.905690000000000000
+        Width = 192.756030000000000000
         DataSet = dbPagamentos
         DataSetName = 'dbPagamentos'
         RowCount = 0
         object Memo39: TfrxMemoView
-          Left = 211.417440000000000000
+          Left = 139.606370000000000000
           Width = 45.354360000000000000
           Height = 15.118120000000000000
           DataField = 'valor'
@@ -2675,8 +2706,7 @@ object frmPDVFechamento: TfrmPDVFechamento
         end
         object Memo40: TfrxMemoView
           ShiftMode = smDontShift
-          Left = 11.338590000000000000
-          Width = 162.519790000000000000
+          Width = 98.267780000000000000
           Height = 15.118120000000000000
           StretchMode = smMaxHeight
           DataField = 'desc_formapag'
@@ -2684,7 +2714,7 @@ object frmPDVFechamento: TfrmPDVFechamento
           DataSetName = 'dbPagamentos'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -9
           Font.Name = 'Arial'
           Font.Style = []
           Memo.UTF8W = (
@@ -2697,7 +2727,7 @@ object frmPDVFechamento: TfrmPDVFechamento
         FillType = ftBrush
         Height = 92.661410000000000000
         Top = 1088.504640000000000000
-        Width = 275.905690000000000000
+        Width = 192.756030000000000000
         object Line6: TfrxLineView
           Left = 7.559060000000000000
           Top = 35.968460000000050000
@@ -2708,11 +2738,11 @@ object frmPDVFechamento: TfrmPDVFechamento
         object Memo22: TfrxMemoView
           Left = 11.338590000000000000
           Top = 49.133890000000060000
-          Width = 226.771800000000000000
-          Height = 34.015770000000010000
+          Width = 162.519790000000000000
+          Height = 34.015770000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -24
+          Font.Height = -16
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           Memo.UTF8W = (
@@ -2721,12 +2751,12 @@ object frmPDVFechamento: TfrmPDVFechamento
         end
         object Memo26: TfrxMemoView
           Left = 12.338590000000000000
-          Top = 0.614100000000007800
-          Width = 226.771800000000000000
+          Top = 0.614100000000007700
+          Width = 162.519790000000000000
           Height = 22.677180000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -9
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           Memo.UTF8W = (
@@ -2738,14 +2768,14 @@ object frmPDVFechamento: TfrmPDVFechamento
         FillType = ftBrush
         Height = 15.118120000000000000
         Top = 404.409710000000000000
-        Width = 275.905690000000000000
+        Width = 192.756030000000000000
         DataSet = dbItensFechamento
         DataSetName = 'dbItensFechamento'
         PrintIfDetailEmpty = True
         RowCount = 0
         Stretched = True
         object Memo46: TfrxMemoView
-          Left = 147.960629920000000000
+          Left = 87.960629920000000000
           Width = 32.125984250000000000
           Height = 15.118120000000000000
           DataField = 'vlrvenda'
@@ -2764,7 +2794,7 @@ object frmPDVFechamento: TfrmPDVFechamento
           ParentFont = False
         end
         object Memo47: TfrxMemoView
-          Left = 215.976500000000000000
+          Left = 152.976500000000000000
           Width = 41.574830000000000000
           Height = 15.118120000000000000
           DataField = 'valor_total'
@@ -2785,7 +2815,7 @@ object frmPDVFechamento: TfrmPDVFechamento
         object Memo48: TfrxMemoView
           ShiftMode = smDontShift
           Left = 3.779527560000000000
-          Width = 143.622140000000000000
+          Width = 83.149660000000000000
           Height = 15.118120000000000000
           StretchMode = smMaxHeight
           DataField = 'descricao_item'
@@ -2793,7 +2823,7 @@ object frmPDVFechamento: TfrmPDVFechamento
           DataSetName = 'dbItensFechamento'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -8
           Font.Name = 'Arial'
           Font.Style = []
           Memo.UTF8W = (
@@ -2802,7 +2832,7 @@ object frmPDVFechamento: TfrmPDVFechamento
           WordBreak = True
         end
         object Memo49: TfrxMemoView
-          Left = 180.086614170000000000
+          Left = 119.086614170000000000
           Width = 34.015748030000000000
           Height = 15.118120000000000000
           DataField = 'qtdevenda'
@@ -2824,15 +2854,15 @@ object frmPDVFechamento: TfrmPDVFechamento
       object MasterData4: TfrxMasterData
         FillType = ftBrush
         Height = 15.118120000000000000
-        Top = 521.575140000000000000
-        Width = 275.905690000000000000
+        Top = 521.575140000000100000
+        Width = 192.756030000000000000
         DataSet = dbItensFracionadoFechamento
         DataSetName = 'dbItensFracionadoFechamento'
         PrintIfDetailEmpty = True
         RowCount = 0
         Stretched = True
         object Memo50: TfrxMemoView
-          Left = 148.047310000000000000
+          Left = 92.354360000000000000
           Width = 32.125984250000000000
           Height = 15.118120000000000000
           DataField = 'vlrvenda'
@@ -2842,7 +2872,7 @@ object frmPDVFechamento: TfrmPDVFechamento
           DisplayFormat.Kind = fkNumeric
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -8
           Font.Name = 'Arial'
           Font.Style = []
           HAlign = haRight
@@ -2851,7 +2881,7 @@ object frmPDVFechamento: TfrmPDVFechamento
           ParentFont = False
         end
         object Memo51: TfrxMemoView
-          Left = 215.992125980000000000
+          Left = 163.078705980000000000
           Width = 41.574830000000000000
           Height = 15.118120000000000000
           DataField = 'valor_total'
@@ -2861,7 +2891,7 @@ object frmPDVFechamento: TfrmPDVFechamento
           DisplayFormat.Kind = fkNumeric
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -8
           Font.Name = 'Arial'
           Font.Style = []
           HAlign = haRight
@@ -2872,15 +2902,15 @@ object frmPDVFechamento: TfrmPDVFechamento
         object Memo52: TfrxMemoView
           ShiftMode = smWhenOverlapped
           Left = 3.779527560000000000
-          Width = 143.622140000000000000
-          Height = 15.118120000000000000
+          Width = 86.929190000000000000
+          Height = 11.338590000000000000
           StretchMode = smMaxHeight
           DataField = 'descricao_item'
           DataSet = dbItensFracionadoFechamento
           DataSetName = 'dbItensFracionadoFechamento'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -8
           Font.Name = 'Arial'
           Font.Style = []
           Memo.UTF8W = (
@@ -2889,7 +2919,7 @@ object frmPDVFechamento: TfrmPDVFechamento
           WordBreak = True
         end
         object Memo53: TfrxMemoView
-          Left = 180.063080000000000000
+          Left = 127.149660000000000000
           Width = 34.015770000000000000
           Height = 15.118120000000000000
           DataField = 'qtd_fracao'
@@ -2899,7 +2929,7 @@ object frmPDVFechamento: TfrmPDVFechamento
           DisplayFormat.Kind = fkNumeric
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -8
           Font.Name = 'Arial'
           Font.Style = []
           HAlign = haRight
@@ -2912,12 +2942,12 @@ object frmPDVFechamento: TfrmPDVFechamento
         FillType = ftBrush
         Height = 18.897650000000000000
         Top = 480.000310000000000000
-        Width = 275.905690000000000000
+        Width = 192.756030000000000000
         Condition = 'dbItensFracionadoFechamento."item_fracionado"'
         object Memo54: TfrxMemoView
           Left = 3.779527560000000000
-          Top = 2.000000000000057000
-          Width = 253.228510000000000000
+          Top = 2.000000000000000000
+          Width = 185.196970000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -2926,9 +2956,7 @@ object frmPDVFechamento: TfrmPDVFechamento
           Font.Style = []
           HAlign = haCenter
           Memo.UTF8W = (
-            
-              '- - - - - - - - - - - - - - Item Fracionado - - - - - - - - - - ' +
-              '- - - -')
+            '- - - - - - - Item Fracionado - - - - - - - - - - - - - -')
           ParentFont = False
         end
         object Line11: TfrxLineView
@@ -2942,7 +2970,7 @@ object frmPDVFechamento: TfrmPDVFechamento
         FillType = ftBrush
         Height = 128.504020000000000000
         Top = 634.961040000000000000
-        Width = 275.905690000000000000
+        Width = 192.756030000000000000
         object Line3: TfrxLineView
           Top = 3.795300000000111000
           Width = 257.007874015748000000
@@ -2951,7 +2979,7 @@ object frmPDVFechamento: TfrmPDVFechamento
         end
         object Memo23: TfrxMemoView
           Left = 11.338590000000000000
-          Top = 5.795300000000111000
+          Top = 5.795299999999997000
           Width = 71.811070000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -2965,8 +2993,8 @@ object frmPDVFechamento: TfrmPDVFechamento
         end
         object Memo24: TfrxMemoView
           Left = 11.338590000000000000
-          Top = 59.692950000000220000
-          Width = 102.047310000000000000
+          Top = 59.692950000000000000
+          Width = 75.590600000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -2978,13 +3006,13 @@ object frmPDVFechamento: TfrmPDVFechamento
           ParentFont = False
         end
         object Memo25: TfrxMemoView
-          Left = 11.338590000000000000
+          Left = 7.559060000000000000
           Top = 99.236239999999950000
-          Width = 71.811070000000000000
+          Width = 45.354360000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -16
+          Font.Height = -13
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           Memo.UTF8W = (
@@ -2998,7 +3026,7 @@ object frmPDVFechamento: TfrmPDVFechamento
           Frame.Typ = [ftTop]
         end
         object Memo28: TfrxMemoView
-          Left = 170.078850000000000000
+          Left = 102.047310000000000000
           Top = 5.795299999999997000
           Width = 86.929190000000000000
           Height = 15.118120000000000000
@@ -3017,31 +3045,13 @@ object frmPDVFechamento: TfrmPDVFechamento
           ParentFont = False
         end
         object Line7: TfrxLineView
-          Left = 173.299320000000000000
-          Top = 96.913420000000200000
-          Width = 86.929190000000000000
+          Top = 96.913419999999970000
+          Width = 260.787570000000000000
           Color = clBlack
           Frame.Typ = [ftTop]
         end
-        object Memo29: TfrxMemoView
-          Left = 170.299320000000000000
-          Top = 59.472480000000010000
-          Width = 86.929190000000000000
-          Height = 15.118120000000000000
-          DisplayFormat.FormatStr = '%2.2n'
-          DisplayFormat.Kind = fkNumeric
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -11
-          Font.Name = 'Arial'
-          Font.Style = []
-          HAlign = haRight
-          Memo.UTF8W = (
-            '[sAcrescimo]')
-          ParentFont = False
-        end
         object Memo30: TfrxMemoView
-          Left = 147.401670000000000000
+          Left = 71.811070000000000000
           Top = 99.236239999999950000
           Width = 109.606370000000000000
           Height = 18.897650000000000000
@@ -3051,7 +3061,7 @@ object frmPDVFechamento: TfrmPDVFechamento
           DisplayFormat.Kind = fkNumeric
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -16
+          Font.Height = -13
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           HAlign = haRight
@@ -3074,8 +3084,8 @@ object frmPDVFechamento: TfrmPDVFechamento
           ParentFont = False
         end
         object Memo32: TfrxMemoView
-          Left = 154.960730000000000000
-          Top = 22.795300000000110000
+          Left = 147.401670000000000000
+          Top = 22.795300000000000000
           Width = 41.574830000000000000
           Height = 15.118120000000000000
           DataField = 'valor_desconto_itens'
@@ -3108,8 +3118,8 @@ object frmPDVFechamento: TfrmPDVFechamento
           ParentFont = False
         end
         object dbPedidodesconto_venda: TfrxMemoView
-          Left = 170.078850000000000000
-          Top = 41.574830000000360000
+          Left = 102.047310000000000000
+          Top = 41.574830000000020000
           Width = 86.929190000000000000
           Height = 15.118110240000000000
           DataField = 'desconto_venda'
@@ -3127,20 +3137,39 @@ object frmPDVFechamento: TfrmPDVFechamento
             '[dbPedido."desconto_venda"]')
           ParentFont = False
         end
+        object Memo27: TfrxMemoView
+          Left = 98.267780000000000000
+          Top = 60.472480000000010000
+          Width = 86.929190000000000000
+          Height = 15.118110240000000000
+          DataSet = dbPedido
+          DataSetName = 'dbPedido'
+          DisplayFormat.FormatStr = '%2.2n'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[dbPedido."acrescimo"]')
+          ParentFont = False
+        end
       end
       object DetailData1: TfrxDetailData
         FillType = ftBrush
         Height = 15.118120000000000000
         Top = 559.370440000000000000
-        Width = 275.905690000000000000
+        Width = 192.756030000000000000
         DataSet = dbItensFracionadoOpcional
         DataSetName = 'dbItensFracionadoOpcional'
         PrintIfDetailEmpty = True
         RowCount = 0
         Stretched = True
         object dbItensOpcionaldescricao: TfrxMemoView
-          Left = 3.779527559055118000
-          Width = 249.448980000000000000
+          Left = 3.779527560000000000
+          Width = 181.417440000000000000
           Height = 15.118120000000000000
           DataField = 'descricao'
           DataSet = dbItensFracionadoOpcional
@@ -3159,14 +3188,14 @@ object frmPDVFechamento: TfrmPDVFechamento
         FillType = ftBrush
         Height = 15.118120000000000000
         Top = 442.205010000000000000
-        Width = 275.905690000000000000
+        Width = 192.756030000000000000
         DataSet = dbItensOpcional
         DataSetName = 'dbItensOpcional'
         PrintIfDetailEmpty = True
         RowCount = 0
         object Memo19: TfrxMemoView
-          Left = 3.779527559055118000
-          Width = 241.889920000000000000
+          Left = 3.779527560000000000
+          Width = 185.196970000000000000
           Height = 15.118120000000000000
           DataField = 'descricao'
           DataSet = dbItensOpcional
@@ -3185,10 +3214,10 @@ object frmPDVFechamento: TfrmPDVFechamento
         FillType = ftBrush
         Height = 15.118120000000000000
         Top = 597.165740000000000000
-        Width = 275.905690000000000000
+        Width = 192.756030000000000000
         object Memo20: TfrxMemoView
           Left = 3.779527560000000000
-          Width = 253.228510000000000000
+          Width = 177.637910000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -3209,7 +3238,7 @@ object frmPDVFechamento: TfrmPDVFechamento
         FillType = ftBrush
         Height = 7.559060000000000000
         Top = 1058.268400000000000000
-        Width = 275.905690000000000000
+        Width = 192.756030000000000000
         DataSet = dbEmpresa
         DataSetName = 'dbEmpresa'
         RowCount = 0
@@ -3224,15 +3253,15 @@ object frmPDVFechamento: TfrmPDVFechamento
         FillType = ftBrush
         Height = 18.897650000000000000
         Top = 865.512370000000000000
-        Width = 275.905690000000000000
+        Width = 192.756030000000000000
         object Memo34: TfrxMemoView
           Left = 3.779527560000000000
-          Top = 1.584964190000164000
-          Width = 79.613970650000000000
-          Height = 15.727721610000000000
+          Top = 1.584964190000051000
+          Width = 53.157260650000000000
+          Height = 11.948191610000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -9
           Font.Name = 'Arial'
           Font.Style = []
           Memo.UTF8W = (
@@ -3240,13 +3269,13 @@ object frmPDVFechamento: TfrmPDVFechamento
           ParentFont = False
         end
         object Memo36: TfrxMemoView
-          Left = 86.929190000000000000
-          Top = 1.584964190000164000
-          Width = 79.613970650000000000
-          Height = 15.727721610000000000
+          Left = 75.590600000000000000
+          Top = 1.584964190000051000
+          Width = 53.157260650000000000
+          Height = 11.948191610000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -9
           Font.Name = 'Arial'
           Font.Style = []
           Memo.UTF8W = (
@@ -3254,13 +3283,13 @@ object frmPDVFechamento: TfrmPDVFechamento
           ParentFont = False
         end
         object Memo55: TfrxMemoView
-          Left = 181.417440000000000000
-          Top = 1.584964190000164000
-          Width = 45.598200650000000000
+          Left = 147.401670000000000000
+          Top = 1.584964190000051000
+          Width = 26.700550650000000000
           Height = 15.727721610000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -9
           Font.Name = 'Arial'
           Font.Style = []
           HAlign = haRight
@@ -3279,10 +3308,10 @@ object frmPDVFechamento: TfrmPDVFechamento
         FillType = ftBrush
         Height = 18.897650000000000000
         Top = 823.937540000000000000
-        Width = 275.905690000000000000
+        Width = 192.756030000000000000
         object Memo35: TfrxMemoView
-          Left = 211.417440000000000000
-          Top = 2.000000000000000000
+          Left = 136.826840000000000000
+          Top = 1.000000000000000000
           Width = 45.354360000000000000
           Height = 15.118120000000000000
           DataField = 'valor_troco'
@@ -3304,7 +3333,7 @@ object frmPDVFechamento: TfrmPDVFechamento
           ShiftMode = smDontShift
           Left = 11.338590000000000000
           Top = 1.000000000000000000
-          Width = 105.826840000000000000
+          Width = 56.692950000000000000
           Height = 15.118120000000000000
           StretchMode = smMaxHeight
           Font.Charset = DEFAULT_CHARSET
@@ -3321,15 +3350,15 @@ object frmPDVFechamento: TfrmPDVFechamento
         FillType = ftBrush
         Height = 60.472480000000000000
         Top = 321.260050000000000000
-        Width = 275.905690000000000000
+        Width = 192.756030000000000000
         object Memo11: TfrxMemoView
-          Left = 139.401670000000000000
+          Left = 116.724490000000000000
           Top = 0.834496769999987100
-          Width = 30.236240000000000000
-          Height = 15.118120000000000000
+          Width = 26.456710000000000000
+          Height = 11.338590000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -8
           Font.Name = 'Arial'
           Font.Style = []
           Memo.UTF8W = (
@@ -3337,14 +3366,14 @@ object frmPDVFechamento: TfrmPDVFechamento
           ParentFont = False
         end
         object Line1: TfrxLineView
-          Top = 37.291280000000030000
+          Top = 37.291279999999970000
           Width = 257.007874020000000000
           Color = clBlack
           Frame.Typ = [ftTop]
         end
         object Memo12: TfrxMemoView
           Left = 3.779527560000000000
-          Top = 39.409400000000120000
+          Top = 39.409400000000010000
           Width = 60.472480000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -3357,13 +3386,13 @@ object frmPDVFechamento: TfrmPDVFechamento
           ParentFont = False
         end
         object Memo13: TfrxMemoView
-          Left = 143.960730000000000000
-          Top = 39.409400000000120000
-          Width = 37.795300000000000000
-          Height = 15.118120000000000000
+          Left = 94.385900000000000000
+          Top = 39.629869999999980000
+          Width = 30.236240000000000000
+          Height = 11.338590000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -9
           Font.Name = 'Arial'
           Font.Style = []
           HAlign = haCenter
@@ -3372,13 +3401,13 @@ object frmPDVFechamento: TfrmPDVFechamento
           ParentFont = False
         end
         object Memo14: TfrxMemoView
-          Left = 181.976500000000000000
-          Top = 39.409400000000120000
-          Width = 34.015770000000010000
-          Height = 15.118120000000000000
+          Left = 127.401670000000000000
+          Top = 39.409400000000010000
+          Width = 26.456710000000000000
+          Height = 11.338590000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -9
           Font.Name = 'Arial'
           Font.Style = []
           HAlign = haRight
@@ -3387,13 +3416,13 @@ object frmPDVFechamento: TfrmPDVFechamento
           ParentFont = False
         end
         object Memo15: TfrxMemoView
-          Left = 215.992270000000000000
-          Top = 39.409400000000120000
-          Width = 41.574830000000000000
-          Height = 15.118120000000000000
+          Left = 161.110390000000000000
+          Top = 39.409400000000010000
+          Width = 26.456710000000000000
+          Height = 11.338590000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -9
           Font.Name = 'Arial'
           Font.Style = []
           HAlign = haRight
@@ -3407,30 +3436,14 @@ object frmPDVFechamento: TfrmPDVFechamento
           Color = clBlack
           Frame.Typ = [ftTop]
         end
-        object Memo18: TfrxMemoView
-          Left = 170.637868500000000000
-          Top = 0.834496769999987100
-          Width = 86.929190000000000000
-          Height = 15.118120000000000000
-          DisplayFormat.FormatStr = 'dd/mm/yyyy hh:nn'
-          DisplayFormat.Kind = fkDateTime
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -11
-          Font.Name = 'Arial'
-          Font.Style = []
-          Memo.UTF8W = (
-            '[dbPedido."Fechamento"]')
-          ParentFont = False
-        end
         object Memo10: TfrxMemoView
           Left = 3.779527560000000000
           Top = 0.834496769999987100
-          Width = 52.913420000000000000
-          Height = 15.118120000000000000
+          Width = 41.574830000000000000
+          Height = 11.338590000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -8
           Font.Name = 'Arial'
           Font.Style = []
           Memo.UTF8W = (
@@ -3438,13 +3451,13 @@ object frmPDVFechamento: TfrmPDVFechamento
           ParentFont = False
         end
         object Memo17: TfrxMemoView
-          Left = 58.031498500000000000
+          Left = 46.692908500000000000
           Top = 0.834496769999987100
-          Width = 79.370130000000000000
-          Height = 15.118120000000000000
+          Width = 68.031540000000000000
+          Height = 11.338590000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -8
           Font.Name = 'Arial'
           Font.Style = []
           Memo.UTF8W = (
@@ -3466,7 +3479,7 @@ object frmPDVFechamento: TfrmPDVFechamento
           ParentFont = False
         end
         object Memo45: TfrxMemoView
-          Left = 56.692950000000010000
+          Left = 56.692950000000000000
           Top = 18.897650000000000000
           Width = 113.385900000000000000
           Height = 15.118120000000000000
@@ -3487,7 +3500,7 @@ object frmPDVFechamento: TfrmPDVFechamento
         FillType = ftBrush
         Height = 102.047310000000000000
         Top = 196.535560000000000000
-        Width = 275.905690000000000000
+        Width = 192.756030000000000000
         DataSet = dbDadosCliente
         DataSetName = 'dbDadosCliente'
         RowCount = 0
@@ -3508,7 +3521,7 @@ object frmPDVFechamento: TfrmPDVFechamento
         object Memo33: TfrxMemoView
           Left = 63.133892440000000000
           Top = 1.464439999999996000
-          Width = 173.858380000000000000
+          Width = 124.724490000000000000
           Height = 15.118120000000000000
           DataField = 'nome'
           DataSet = dbDadosCliente
@@ -3540,7 +3553,7 @@ object frmPDVFechamento: TfrmPDVFechamento
         object Memo57: TfrxMemoView
           Left = 63.133894880000000000
           Top = 15.946737500000010000
-          Width = 203.858380000000000000
+          Width = 124.488250000000000000
           Height = 15.118120000000000000
           DataField = 'endereco'
           DataSet = dbDadosCliente
@@ -3572,7 +3585,7 @@ object frmPDVFechamento: TfrmPDVFechamento
         object Memo59: TfrxMemoView
           Left = 63.133894880000000000
           Top = 34.429035000000000000
-          Width = 202.858380000000000000
+          Width = 123.488250000000000000
           Height = 15.118120000000000000
           DataField = 'bairro'
           DataSet = dbDadosCliente
@@ -3604,7 +3617,7 @@ object frmPDVFechamento: TfrmPDVFechamento
         object Memo61: TfrxMemoView
           Left = 63.133894880000000000
           Top = 50.911332499999990000
-          Width = 201.858380000000000000
+          Width = 122.488250000000000000
           Height = 15.118120000000000000
           DataField = 'cidade_desc'
           DataSet = dbDadosCliente
@@ -3636,7 +3649,7 @@ object frmPDVFechamento: TfrmPDVFechamento
         object Memo63: TfrxMemoView
           Left = 63.133894880000000000
           Top = 67.393630000000000000
-          Width = 200.858380000000000000
+          Width = 121.488250000000000000
           Height = 15.118120000000000000
           DataField = 'telefone1'
           DataSet = dbDadosCliente
@@ -3668,7 +3681,7 @@ object frmPDVFechamento: TfrmPDVFechamento
         object Memo65: TfrxMemoView
           Left = 63.133894880000000000
           Top = 83.511749999999970000
-          Width = 173.858380000000000000
+          Width = 120.944960000000000000
           Height = 15.118120000000000000
           DataField = 'cpf'
           DataSet = dbDadosCliente
@@ -3688,7 +3701,7 @@ object frmPDVFechamento: TfrmPDVFechamento
         FillType = ftBrush
         Height = 22.677180000000000000
         Top = 907.087200000000000000
-        Width = 275.905690000000000000
+        Width = 192.756030000000000000
         DataSet = dbCreceberFiado
         DataSetName = 'dbCreceberFiado'
         RowCount = 0
@@ -3703,7 +3716,7 @@ object frmPDVFechamento: TfrmPDVFechamento
         object Memo38: TfrxMemoView
           Left = 3.779530000000000000
           Top = 3.779530000000022000
-          Width = 79.370130000000000000
+          Width = 60.472480000000000000
           Height = 15.118110240000000000
           AutoWidth = True
           DataField = 'documento'
@@ -3711,7 +3724,7 @@ object frmPDVFechamento: TfrmPDVFechamento
           DataSetName = 'dbCreceberFiado'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -9
           Font.Name = 'Arial'
           Font.Style = []
           Fill.BackColor = clWindow
@@ -3720,9 +3733,9 @@ object frmPDVFechamento: TfrmPDVFechamento
           ParentFont = False
         end
         object Memo42: TfrxMemoView
-          Left = 86.929190000000000000
+          Left = 68.031540000000000000
           Top = 3.779530000000022000
-          Width = 79.370130000000000000
+          Width = 56.692950000000000000
           Height = 15.118110240000000000
           AutoWidth = True
           DataField = 'data_vencimento'
@@ -3730,7 +3743,7 @@ object frmPDVFechamento: TfrmPDVFechamento
           DataSetName = 'dbCreceberFiado'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -9
           Font.Name = 'Arial'
           Font.Style = []
           Fill.BackColor = clWindow
@@ -3739,7 +3752,7 @@ object frmPDVFechamento: TfrmPDVFechamento
           ParentFont = False
         end
         object Memo43: TfrxMemoView
-          Left = 177.637910000000000000
+          Left = 128.504020000000000000
           Top = 3.779530000000022000
           Width = 49.133890000000000000
           Height = 15.118110240000000000
@@ -3751,7 +3764,7 @@ object frmPDVFechamento: TfrmPDVFechamento
           DisplayFormat.Kind = fkNumeric
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -9
           Font.Name = 'Arial'
           Font.Style = []
           Fill.BackColor = clWindow
@@ -3765,7 +3778,7 @@ object frmPDVFechamento: TfrmPDVFechamento
         FillType = ftBrush
         Height = 83.711331110000000000
         Top = 952.441560000000000000
-        Width = 275.905690000000000000
+        Width = 192.756030000000000000
         object Line13: TfrxLineView
           Top = 3.779530000000022000
           Width = 257.007874020000000000
@@ -3781,11 +3794,11 @@ object frmPDVFechamento: TfrmPDVFechamento
         object Memo66: TfrxMemoView
           Left = 6.089159790000000000
           Top = 67.314986670000050000
-          Width = 244.829554440000000000
+          Width = 176.798014440000000000
           Height = 14.278224440000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -9
           Font.Name = 'Arial'
           Font.Style = []
           HAlign = haCenter
@@ -3793,6 +3806,22 @@ object frmPDVFechamento: TfrmPDVFechamento
             'Assinatura do Cliente')
           ParentFont = False
         end
+      end
+      object Memo18: TfrxMemoView
+        Left = 144.181158500000000000
+        Top = 321.094546770000000000
+        Width = 45.354360000000000000
+        Height = 15.118120000000000000
+        DisplayFormat.FormatStr = 'dd/mm/yyyy hh:nn'
+        DisplayFormat.Kind = fkDateTime
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -8
+        Font.Name = 'Arial'
+        Font.Style = []
+        Memo.UTF8W = (
+          '[dbPedido."Fechamento"]')
+        ParentFont = False
       end
     end
   end
@@ -4010,6 +4039,7 @@ object frmPDVFechamento: TfrmPDVFechamento
       'and ite.item_fracionado>0'
       'ORDER BY ITE.ITE_001')
     ReadOnly = True
+    Active = True
     BeforeOpen = qrVendaItemBeforeOpen
     Left = 424
     Top = 8
@@ -4187,6 +4217,7 @@ object frmPDVFechamento: TfrmPDVFechamento
       'and (ite.item_fracionado is null or ite.item_fracionado=0)'
       'ORDER BY ITE.ITE_001')
     ReadOnly = True
+    Active = True
     BeforeOpen = qrVendaItemBeforeOpen
     Left = 232
     ParamData = <
@@ -4482,6 +4513,7 @@ object frmPDVFechamento: TfrmPDVFechamento
     MasterFields = 'nro_item'
     DetailFields = 'id_vendaitem'
     ReadOnly = True
+    Active = True
     Left = 160
     Top = 464
     ParamData = <
@@ -4501,7 +4533,7 @@ object frmPDVFechamento: TfrmPDVFechamento
         DataType = ftInteger
         Name = 'nro_item'
         ParamType = ptInput
-        Value = 1
+        Value = 4
       end>
     object qrVendaItemOpcionalid_venda: TIntegerField
       FieldName = 'id_venda'
@@ -4607,7 +4639,7 @@ object frmPDVFechamento: TfrmPDVFechamento
     end
   end
   object repPainelSenha: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -4622,8 +4654,8 @@ object frmPDVFechamento: TfrmPDVFechamento
       'begin'
       ''
       'end.')
-    Left = 42
-    Top = 356
+    Left = 58
+    Top = 588
     Datasets = <
       item
         DataSet = dbEmpresa
@@ -4753,7 +4785,7 @@ object frmPDVFechamento: TfrmPDVFechamento
     end
   end
   object RepFechaConta2: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -4768,7 +4800,7 @@ object frmPDVFechamento: TfrmPDVFechamento
       'begin'
       ''
       'end.')
-    Left = 170
+    Left = 266
     Top = 396
     Datasets = <
       item
@@ -6177,6 +6209,7 @@ object frmPDVFechamento: TfrmPDVFechamento
       'cli_012 as telefone1,'
       'cli_004 as cpf '
       'from clientes where cli_001=:id_cliente and emp_001=:id_empresa')
+    Active = True
     Left = 679
     Top = 13
     ParamData = <
@@ -6248,5 +6281,27 @@ object frmPDVFechamento: TfrmPDVFechamento
       ShortCut = 16467
       OnExecute = Action2Execute
     end
+  end
+  object frxDesigner1: TfrxDesigner
+    DefaultScriptLanguage = 'PascalScript'
+    DefaultFont.Charset = DEFAULT_CHARSET
+    DefaultFont.Color = clWindowText
+    DefaultFont.Height = -13
+    DefaultFont.Name = 'Arial'
+    DefaultFont.Style = []
+    DefaultLeftMargin = 10.000000000000000000
+    DefaultRightMargin = 10.000000000000000000
+    DefaultTopMargin = 10.000000000000000000
+    DefaultBottomMargin = 10.000000000000000000
+    DefaultPaperSize = 9
+    DefaultOrientation = poPortrait
+    GradientEnd = 11982554
+    GradientStart = clWindow
+    TemplatesExt = 'fr3'
+    Restrictions = []
+    RTLLanguage = False
+    MemoParentFont = False
+    Left = 152
+    Top = 576
   end
 end

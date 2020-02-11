@@ -198,7 +198,7 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.Title := 'ELITEFOOD';
+  Application.Title := 'Infor Restaurante_Bar';
   Application.CreateForm(TfrmMenu, frmMenu);
   Application.CreateForm(TFTef, FTef);
   Application.CreateForm(TfrmEtiquetaProduto, frmEtiquetaProduto);

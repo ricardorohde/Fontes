@@ -1657,7 +1657,7 @@
       AlignWithMargins = True
       Left = 3
       Top = 3
-      Width = 152
+      Width = 1014
       Height = 19
       Align = alClient
       Alignment = taCenter
@@ -1668,6 +1668,7 @@
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitWidth = 152
     end
   end
   object pn4Rodape: TPanel
@@ -1712,7 +1713,7 @@
       AlignWithMargins = True
       Left = 4
       Top = 158
-      Width = 151
+      Width = 497
       Height = 16
       Margins.Top = 1
       Margins.Bottom = 1
@@ -1725,6 +1726,7 @@
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitWidth = 151
     end
     object cxGridItens: TcxGrid
       Tag = 1
@@ -1915,7 +1917,7 @@
         493
         92)
       object Label12: TLabel
-        Left = 433
+        Left = 425
         Top = 79
         Width = 18
         Height = 13
@@ -2007,7 +2009,7 @@
         WordWrap = True
       end
       object btnSair: TAdvGlowButton
-        Left = 406
+        Left = 398
         Top = 7
         Width = 66
         Height = 66
@@ -2046,11 +2048,10 @@
         Appearance.ColorMirrorDisabled = 11974326
         Appearance.ColorMirrorDisabledTo = 15921906
         Layout = blGlyphTopAdjusted
-        ExplicitLeft = 418
       end
       object btFecharMesa: TAdvGlowButton
         AlignWithMargins = True
-        Left = 336
+        Left = 326
         Top = 8
         Width = 66
         Height = 66

@@ -29,7 +29,7 @@ uses
   dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
   dxSkinTheAsphaltWorld, dxSkinValentine, dxSkinVisualStudio2013Blue,
   dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, dxSkinVS2010,
-  dxSkinWhiteprint, dxSkinXmas2008Blue, ACBrTEFDClass, Vcl.Buttons;
+  dxSkinWhiteprint, dxSkinXmas2008Blue, ACBrTEFDClass, Vcl.Buttons, frxDesgn;
 
 type
   TfrmControleMesaFechamento = class(TForm)
@@ -330,7 +330,7 @@ type
     qrFormabandeira_cartao: TWideStringField;
     lMensagemCliente: TLabel;
     Action1: TAction;
-    btn1: TBitBtn;
+    frxDesigner1: TfrxDesigner;
     constructor Create (Sender : TComponent ; id_venda: integer ; modo_touch : boolean = false);
     procedure este1Click(Sender: TObject);
     procedure teste21Click(Sender: TObject);
@@ -414,7 +414,6 @@ type
     procedure ImprimePainelSenha(sVenda: string);
     procedure chamaTef(cnpjCred, bandeira, campo, numVenda : string; valorInformado : currency);
     procedure Action1Execute(Sender: TObject);
-    procedure btn1Click(Sender: TObject);
   private
     { Private declarations }
    b_couvert, b_taxa_adicional, b_aguarda_liberacao, modo_touch, utiliza_gaveta,
@@ -511,6 +510,7 @@ begin
     //colocado no laço for para poder cortar, se simplesmente mudar a quantidade de copias, o relatorio sai em sequencia e não corta entre os cupons
     for I := 1 to numero_vias do
       RepFechaConta.Print;
+      //RepFechaConta.ShowReport;
   end;
 
 end;
@@ -1316,18 +1316,6 @@ end;
 procedure TfrmControleMesaFechamento.btFiadoClick(Sender: TObject);
 begin
   insereParcela(btFiado.Tag, 'Fiado', edValorPagamento.Value, edNroAutorizacao.Text, false, false, true);
-end;
-
-procedure TfrmControleMesaFechamento.btn1Click(Sender: TObject);
-var RepFechaConta: TfrxReport;
-begin
-//RepFechaConta.LoadFromFile('C:\EliteFood\Relatorios\FECHAMENTOMESA.fr3');
-  //  RepFechaConta.DESIGNREPORT;
-
- //  RepFechaConta.LoadFromFile(ExtractFilePath(application.ExeName) +
- //    '\Relatorios\FECHAMENTOMESA.fr3');
-   RepFechaConta.LoadFromFile('C:\EliteFood\Relatorios\FECHAMENTOMESA.fr3');
-    RepFechaConta.DesignReporT
 end;
 
 procedure TfrmControleMesaFechamento.btOutrosClick(Sender: TObject);

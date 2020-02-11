@@ -5825,7 +5825,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
       object DBText3: TDBText
         Left = 140
         Top = 5
-        Width = 49
+        Width = 57
         Height = 16
         AutoSize = True
         DataField = 'valor_venda'
@@ -7052,42 +7052,6 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
       StyleHot.LookAndFeel.NativeStyle = True
       TabOrder = 3
     end
-    object btn1: TBitBtn
-      Left = 75
-      Top = 0
-      Width = 62
-      Height = 25
-      Caption = 'Editar'
-      Glyph.Data = {
-        36030000424D3603000000000000360000002800000010000000100000000100
-        18000000000000030000C40E0000C40E00000000000000000000FFFFFFFFFFFF
-        FFFFFFFFFFFF1742592A61884B89BD6FA8CCE3EDF5FFFFFFFFFFFFFFFFFFFFFF
-        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF2D668493C6F890C8F840
-        84C8266AADD8E6F2FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-        F3F3F3C5C5C54288A9DFF1FE5399D71979BD4897C43D83BCA7B5C2F4F4F4FFFF
-        FFFFFFFFFFFFFFFFFFFFFFFFFFE5E5E5A8A8A8CDCDCD9BB9CD79B5D48FB6D054
-        C8E35ADEF477CFEC4A96D688939DE6E6E6FFFFFFFFFFFFFFFFFFFFFFFFAFAFAF
-        DDDDDDF2F2F2DADADA95B7C874B8D5C1F5FC62DEF65CE1F778D2EF4796D98892
-        9CFFFFFFFFFFFFFFFFFFFFFFFFB2B2B2EFEFEFDDDDDDD3D3D3D1D1D198BDCE76
-        CAE6C6F6FC5DDBF459E0F67AD3F04694D7D6E7F7FFFFFFFFFFFFFFFFFFB4B4B4
-        F1F1F1E1E1E1D7D7D7D4D4D4DBDBDBA3CBD878D2EDC6F6FC5EDBF45AE1F679D5
-        F150A1E1DCE9F5FFFFFFFFFFFFB6B6B6F2F2F2E6E6E6DCDCDCD8D8D8DFDFDFDA
-        DADA96BFCC7BD3EDC3F5FC6BDCF56CC9EC62A2D668A2D4E5EFF7FFFFFFB7B7B7
-        F3F3F3E9E9E9E0E0E0DCDCDCE2E2E2DDDDDDC8C8C888B9C87FD3ECB1E2F88ABF
-        E6ADD2F5C3DFFB6AA1D3FFFFFFB9B9B9F4F4F4EDEDEDE5E5E5E1E1E1E5E5E5E0
-        E0E0CCCCCCC1C1C188BDCD76BDE6B3D1EFE4F2FEABD1EE5895CBFFFFFFBABABA
-        F5F5F5EAEAEADDDDDDD5D5D5D4D4D4D0D0D0C2C2C2BBBBBBBFBFBFAAD3E257A4
-        D784B0DA459CCFB0D8EEFFFFFFBCBCBCF6F6F6E6E6E6EEEEEEF5F5F5FAFAFAF9
-        F9F9EFEFEFDDDDDDC2C2C2E5E5E5ABABABFFFFFFFFFFFFFFFFFFFFFFFFBEBEBE
-        F7F7F7FDFDFDFEFEFEFEFEFEFEFEFEFEFEFEFEFEFEFEFEFEFAFAFAE9E9E9ADAD
-        ADFFFFFFFFFFFFFFFFFFFFFFFFCBCBCBE0E0E0FDFDFDFEFEFEFEFEFEFEFEFEFE
-        FEFEFEFEFEFEFEFEFAFAFACECECEC8C8C8FFFFFFFFFFFFFFFFFFFFFFFFF4F4F4
-        C6C6C6CFCFCFE7E7E7F2F2F2FCFCFCFBFBFBECECECDFDFDFC1C1C1C0C0C0F6F6
-        F6FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFDFDE8E8E8CFCFCFC3C3C3B7B7B7B7
-        B7B7C2C2C2CCCCCCE9E9E9FEFEFEFFFFFFFFFFFFFFFFFFFFFFFF}
-      TabOrder = 4
-      OnClick = btn1Click
-    end
   end
   object MemoCupomTEF1: TMemo
     Left = 851
@@ -7658,7 +7622,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
     Top = 384
   end
   object RepFechaConta: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -7667,7 +7631,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
     PrintOptions.PrintOnSheet = 0
     PrintOptions.ShowDialog = False
     ReportOptions.CreateDate = 41784.595344467600000000
-    ReportOptions.LastChange = 43576.651525763890000000
+    ReportOptions.LastChange = 43809.660490000000000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -7750,7 +7714,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         Top = 18.897650000000000000
         Width = 188.976500000000000000
         object Memo1: TfrxMemoView
-          Top = 3.779530000000001000
+          Top = 3.779530000000000000
           Width = 177.637910000000000000
           Height = 26.456710000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -7780,7 +7744,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object Memo3: TfrxMemoView
           Left = 116.724490000000000000
-          Top = 48.236239999999990000
+          Top = 48.236240000000000000
           Width = 60.472480000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -7794,7 +7758,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object Memo4: TfrxMemoView
           Left = -2.220472440000000000
-          Top = 48.236239999999990000
+          Top = 48.236240000000000000
           Width = 120.944960000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -7849,7 +7813,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
           ParentFont = False
         end
         object Memo8: TfrxMemoView
-          Left = 0.881877559999999500
+          Left = 0.881877559999999000
           Top = 94.811070000000000000
           Width = 102.047310000000000000
           Height = 15.118120000000000000
@@ -7954,7 +7918,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         Width = 188.976500000000000000
         object Memo26: TfrxMemoView
           Left = 11.338590000000000000
-          Top = 5.511749999999892000
+          Top = 5.511749999999890000
           Width = 173.858380000000000000
           Height = 22.677180000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -7967,7 +7931,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
           ParentFont = False
         end
         object Line5: TfrxLineView
-          Top = 29.086579999999910000
+          Top = 29.086579999999900000
           Width = 192.755864020000000000
           Color = clBlack
           Frame.Typ = [ftTop]
@@ -8169,7 +8133,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
           ParentFont = False
         end
         object Line11: TfrxLineView
-          Top = 1.118119999999976000
+          Top = 1.118119999999980000
           Width = 257.007874020000000000
           Color = clBlack
           Frame.Typ = [ftTop]
@@ -8181,14 +8145,14 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         Top = 616.063390000000000000
         Width = 188.976500000000000000
         object Line3: TfrxLineView
-          Top = 5.795300000000111000
+          Top = 5.795300000000110000
           Width = 257.007874015748000000
           Color = clBlack
           Frame.Typ = [ftTop]
         end
         object Memo23: TfrxMemoView
           Left = 3.779527560000000000
-          Top = 5.795299999999997000
+          Top = 5.795300000000000000
           Width = 56.692950000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -8216,7 +8180,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object Memo25: TfrxMemoView
           Left = 3.779527560000000000
-          Top = 98.236239999999950000
+          Top = 98.236239999999900000
           Width = 71.811070000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -8236,7 +8200,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object Memo28: TfrxMemoView
           Left = 102.401670000000000000
-          Top = 5.795299999999997000
+          Top = 5.795300000000000000
           Width = 86.929190000000000000
           Height = 15.118120000000000000
           DataField = 'valor_venda'
@@ -8256,14 +8220,14 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object Line7: TfrxLineView
           Left = 106.842610000000000000
-          Top = 96.913419999999970000
+          Top = 96.913420000000000000
           Width = 86.929190000000000000
           Color = clBlack
           Frame.Typ = [ftTop]
         end
         object Memo29: TfrxMemoView
           Left = 101.047310000000000000
-          Top = 59.472480000000010000
+          Top = 59.472480000000000000
           Width = 86.929190000000000000
           Height = 15.118120000000000000
           DisplayFormat.FormatStr = '%2.2n'
@@ -8279,8 +8243,8 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
           ParentFont = False
         end
         object Memo30: TfrxMemoView
-          Left = 108.622140000000000000
-          Top = 98.236239999999950000
+          Left = 82.165430000000000000
+          Top = 98.236240000000000000
           Width = 86.929190000000000000
           Height = 18.897650000000000000
           DataSet = dbPedido
@@ -8299,7 +8263,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object Memo31: TfrxMemoView
           Left = 3.779527559055120000
-          Top = 42.692949999999990000
+          Top = 42.692950000000000000
           Width = 71.811070000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -8364,7 +8328,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object Memo34: TfrxMemoView
           Left = 3.779527559055120000
-          Top = 151.724489999999900000
+          Top = 151.724490000000000000
           Width = 94.488250000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -8436,7 +8400,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object Memo41: TfrxMemoView
           Left = 3.779527559055120000
-          Top = 22.677180000000020000
+          Top = 22.677180000000000000
           Width = 98.267780000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -8450,7 +8414,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object dbPedidodesconto_venda: TfrxMemoView
           Left = 101.488250000000000000
-          Top = 41.574830000000020000
+          Top = 41.574830000000000000
           Width = 86.929190000000000000
           Height = 15.118110240000000000
           DataField = 'desconto_venda'
@@ -8484,7 +8448,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object Memo43: TfrxMemoView
           Left = 99.826840000000000000
-          Top = 79.370130000000010000
+          Top = 79.370130000000000000
           Width = 86.929190000000000000
           Height = 15.118120000000000000
           DisplayFormat.FormatStr = '%2.2n'
@@ -8594,7 +8558,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object dbCreceberFiadodocumento: TfrxMemoView
           Left = 3.779530000000000000
-          Top = 3.779530000000022000
+          Top = 3.779530000000020000
           Width = 49.133890000000000000
           Height = 15.118110240000000000
           AutoWidth = True
@@ -8613,7 +8577,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object dbCreceberFiadodata_vencimento: TfrxMemoView
           Left = 56.692950000000000000
-          Top = 3.779530000000022000
+          Top = 3.779530000000020000
           Width = 56.692950000000000000
           Height = 15.118110240000000000
           AutoWidth = True
@@ -8632,7 +8596,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object dbCreceberFiadovalor: TfrxMemoView
           Left = 130.504020000000000000
-          Top = 3.779530000000022000
+          Top = 3.779530000000020000
           Width = 49.133890000000000000
           Height = 15.118110240000000000
           AutoWidth = True
@@ -8660,7 +8624,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         Width = 188.976500000000000000
         object Memo22: TfrxMemoView
           Left = 3.779527560000000000
-          Top = 1.584964190000051000
+          Top = 1.584964190000050000
           Width = 60.716320650000000000
           Height = 15.727721610000000000
           Font.Charset = DEFAULT_CHARSET
@@ -8674,7 +8638,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object Memo36: TfrxMemoView
           Left = 66.929190000000000000
-          Top = 1.584964190000051000
+          Top = 1.584964190000050000
           Width = 60.716320650000000000
           Height = 15.727721610000000000
           Font.Charset = DEFAULT_CHARSET
@@ -8688,7 +8652,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object Memo55: TfrxMemoView
           Left = 138.756030000000000000
-          Top = 1.584964190000051000
+          Top = 1.584964190000050000
           Width = 34.259610650000000000
           Height = 15.727721610000000000
           Font.Charset = DEFAULT_CHARSET
@@ -8702,7 +8666,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
           ParentFont = False
         end
         object Line12: TfrxLineView
-          Top = 1.889754020000055000
+          Top = 1.889754020000050000
           Width = 257.007874020000000000
           Color = clBlack
           Frame.Typ = [ftTop]
@@ -8715,7 +8679,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         Width = 188.976500000000000000
         object Memo44: TfrxMemoView
           Left = 135.063080000000000000
-          Top = 1.779530000000022000
+          Top = 1.779530000000020000
           Width = 45.354360000000000000
           Height = 15.118120000000000000
           DataField = 'valor_troco'
@@ -8759,7 +8723,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         DataSetName = 'dbEmpresa'
         RowCount = 0
         object Line9: TfrxLineView
-          Top = 3.338590000000067000
+          Top = 3.338590000000070000
           Width = 257.007874020000000000
           Color = clBlack
           Frame.Typ = [ftTop]
@@ -8772,7 +8736,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         Width = 188.976500000000000000
         object Memo10: TfrxMemoView
           Left = 3.779527560000000000
-          Top = 0.787260000000003500
+          Top = 0.787260000000002900
           Width = 49.133890000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -8786,7 +8750,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object Memo11: TfrxMemoView
           Left = 3.779527560000000000
-          Top = 16.905379999999980000
+          Top = 16.905380000000000000
           Width = 68.031540000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -8799,14 +8763,14 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
           ParentFont = False
         end
         object Line1: TfrxLineView
-          Top = 32.023500000000010000
+          Top = 32.023500000000000000
           Width = 257.007874015748000000
           Color = clBlack
           Frame.Typ = [ftTop]
         end
         object Memo12: TfrxMemoView
           Left = 3.779527560000000000
-          Top = 32.023500000000010000
+          Top = 32.023500000000000000
           Width = 60.472480000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -8820,7 +8784,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object Memo13: TfrxMemoView
           Left = 78.488250000000000000
-          Top = 32.803029999999980000
+          Top = 32.803030000000000000
           Width = 37.795300000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -8835,7 +8799,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object Memo14: TfrxMemoView
           Left = 118.504020000000000000
-          Top = 32.023500000000010000
+          Top = 32.023500000000000000
           Width = 34.015770000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -8850,7 +8814,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object Memo15: TfrxMemoView
           Left = 147.519790000000000000
-          Top = 32.023500000000010000
+          Top = 32.023500000000000000
           Width = 41.574830000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -8864,14 +8828,14 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
           ParentFont = False
         end
         object Line2: TfrxLineView
-          Top = 47.141619999999990000
+          Top = 47.141620000000000000
           Width = 257.007874020000000000
           Color = clBlack
           Frame.Typ = [ftTop]
         end
         object Memo17: TfrxMemoView
           Left = 56.692950000000000000
-          Top = 0.787260000000003500
+          Top = 0.787260000000002900
           Width = 128.504020000000000000
           Height = 15.118120000000000000
           DataSet = dbPedido
@@ -8889,7 +8853,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object Memo18: TfrxMemoView
           Left = 72.811070000000000000
-          Top = 16.905379999999980000
+          Top = 16.905380000000000000
           Width = 128.504020000000000000
           Height = 15.118120000000000000
           DataSet = dbPedido
@@ -8916,7 +8880,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         RowCount = 0
         object Memo9: TfrxMemoView
           Left = 1.779527560000000000
-          Top = 0.669139999999998700
+          Top = 0.669139999999999000
           Width = 41.574830000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -8930,7 +8894,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object Memo16: TfrxMemoView
           Left = 55.574830000000000000
-          Top = 0.669139999999998700
+          Top = 0.669139999999999000
           Width = 128.504020000000000000
           Height = 15.118120000000000000
           DataField = 'nome'
@@ -8948,7 +8912,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object Memo56: TfrxMemoView
           Left = -0.220470000000000000
-          Top = 17.151437499999990000
+          Top = 17.151437500000000000
           Width = 52.913420000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -8962,7 +8926,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object Memo57: TfrxMemoView
           Left = 55.574832440000000000
-          Top = 17.151437499999990000
+          Top = 17.151437500000000000
           Width = 128.504020000000000000
           Height = 15.118120000000000000
           DataField = 'endereco'
@@ -9012,7 +8976,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object Memo60: TfrxMemoView
           Left = 1.779530000000000000
-          Top = 50.116032499999990000
+          Top = 50.116032500000000000
           Width = 41.574830000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -9026,7 +8990,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object Memo61: TfrxMemoView
           Left = 55.574832440000000000
-          Top = 50.116032499999990000
+          Top = 50.116032500000000000
           Width = 128.504020000000000000
           Height = 15.118120000000000000
           DataField = 'cidade_desc'
@@ -9044,7 +9008,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object Memo62: TfrxMemoView
           Left = 1.779530000000000000
-          Top = 66.598329999999970000
+          Top = 66.598330000000000000
           Width = 52.913420000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -9058,7 +9022,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object Memo63: TfrxMemoView
           Left = 55.574832440000000000
-          Top = 66.598329999999970000
+          Top = 66.598330000000000000
           Width = 128.504020000000000000
           Height = 15.118120000000000000
           DataField = 'telefone1'
@@ -9076,7 +9040,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object Memo64: TfrxMemoView
           Left = 2.779530000000000000
-          Top = 82.716450000000010000
+          Top = 82.716450000000000000
           Width = 52.913420000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -9090,7 +9054,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         end
         object Memo65: TfrxMemoView
           Left = 55.574832440000000000
-          Top = 82.716450000000010000
+          Top = 82.716450000000000000
           Width = 128.504020000000000000
           Height = 15.118120000000000000
           DataField = 'cpf'
@@ -9113,14 +9077,14 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
         Top = 978.898270000000000000
         Width = 188.976500000000000000
         object Line14: TfrxLineView
-          Top = 64.795299999999880000
+          Top = 64.795299999999900000
           Width = 192.755864020000000000
           Color = clBlack
           Frame.Typ = [ftTop]
         end
         object Memo66: TfrxMemoView
           Left = 6.089159790000000000
-          Top = 67.314986669999940000
+          Top = 67.314986669999900000
           Width = 146.561774440000000000
           Height = 14.278224440000000000
           Font.Charset = DEFAULT_CHARSET
@@ -10093,8 +10057,8 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
     MasterFields = 'nro_item'
     DetailFields = 'id_vendaitem'
     ReadOnly = True
-    Left = 608
-    Top = 320
+    Left = 568
+    Top = 336
     ParamData = <
       item
         DataType = ftInteger
@@ -10315,7 +10279,7 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
     Top = 276
   end
   object repPainelSenha: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -10510,5 +10474,27 @@ object frmControleMesaFechamento: TfrmControleMesaFechamento
       FixedChar = True
       Size = 1
     end
+  end
+  object frxDesigner1: TfrxDesigner
+    DefaultScriptLanguage = 'PascalScript'
+    DefaultFont.Charset = DEFAULT_CHARSET
+    DefaultFont.Color = clWindowText
+    DefaultFont.Height = -13
+    DefaultFont.Name = 'Arial'
+    DefaultFont.Style = []
+    DefaultLeftMargin = 10.000000000000000000
+    DefaultRightMargin = 10.000000000000000000
+    DefaultTopMargin = 10.000000000000000000
+    DefaultBottomMargin = 10.000000000000000000
+    DefaultPaperSize = 9
+    DefaultOrientation = poPortrait
+    GradientEnd = 11982554
+    GradientStart = clWindow
+    TemplatesExt = 'fr3'
+    Restrictions = []
+    RTLLanguage = False
+    MemoParentFont = False
+    Left = 304
+    Top = 384
   end
 end

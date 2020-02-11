@@ -2,8 +2,9 @@ inherited frmControleNotaFiscalEntradaImportacao: TfrmControleNotaFiscalEntradaI
   Caption = 'Controle de Nota de Fiscal de Entrada - Importa'#231#227'o XML'
   ClientHeight = 602
   ClientWidth = 1015
+  ExplicitTop = -196
   ExplicitWidth = 1021
-  ExplicitHeight = 631
+  ExplicitHeight = 630
   PixelsPerInch = 96
   TextHeight = 16
   inherited pnPrincipal: TAdvPanel
@@ -550,7 +551,6 @@ inherited frmControleNotaFiscalEntradaImportacao: TfrmControleNotaFiscalEntradaI
             end
             object cxGrid1DBTableView1quantidade: TcxGridDBColumn
               DataBinding.FieldName = 'quantidade'
-              Options.Editing = False
               Width = 74
             end
             object cxGrid1DBTableView1valor_unitario: TcxGridDBColumn
@@ -1456,6 +1456,7 @@ inherited frmControleNotaFiscalEntradaImportacao: TfrmControleNotaFiscalEntradaI
     Configuracoes.WebServices.UF = 'SP'
     Configuracoes.WebServices.AguardarConsultaRet = 0
     Configuracoes.WebServices.QuebradeLinha = '|'
+    Configuracoes.RespTec.IdCSRT = 0
     Left = 760
     Top = 64
   end

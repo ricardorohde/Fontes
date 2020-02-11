@@ -23,7 +23,7 @@ uses
   dxSkinTheAsphaltWorld, dxSkinsDefaultPainters, dxSkinValentine,
   dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
   dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
-  dxSkinXmas2008Blue;
+  dxSkinXmas2008Blue, dxGDIPlusClasses;
 
 type
    TfrmLogin = class(TForm)
@@ -40,6 +40,8 @@ type
     btnCancel: TAdvGlowButton;
     lbVersao: TLabel;
     JvAutoComplete: TJvLookupAutoComplete;
+    Label3: TLabel;
+    Label4: TLabel;
       procedure FormKeyPress(Sender: TObject; var Key: Char);
       procedure cbEmpresaKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
       procedure FormShow(Sender: TObject);
@@ -128,14 +130,14 @@ begin
       //
      if RecordCount > 0 then
        begin
-        if uppercase(qrEmpresa.FieldByName('identificador').AsString) ='ELITEFOOD' THEN
+        if uppercase(qrEmpresa.FieldByName('identificador').AsString) ='Infor Restaurante Bar' THEN
         begin
-          recproj.sInfoDevSistema1 := 'Sistema desenvolvido por ELITE STORY ';
-          recproj.sInfoDevSistema2 := 'Sistema desenvolvido por ELITE STORY ';
+          recproj.sInfoDevSistema1 := 'Sistema desenvolvido por INFOR ';
+          recproj.sInfoDevSistema2 := 'Sistema desenvolvido por INFOR';
           recproj.sSiteDevSistema  := '';
         end
 
-        else if uppercase(qrEmpresa.FieldByName('identificador').AsString)='ELITEFOOD' THEN  // Claudio São Paulo
+        else if uppercase(qrEmpresa.FieldByName('identificador').AsString)='Infor Restaurante Bar' THEN  // Claudio São Paulo
         begin
           recproj.sInfoDevSistema1 := 'Sistema desenvolvido por ELITE STORY' ;
           recproj.sInfoDevSistema2 := 'Sistema desenvolvido por ELITE STORY ';
@@ -143,14 +145,14 @@ begin
         end ;
 
 
-        frmMenu.Caption:= uppercase(qrEmpresa.FieldByName('identificador').AsString);
+       // frmMenu.Caption:= uppercase(qrEmpresa.FieldByName('identificador').AsString);
         frmmenu.cabecalho:= recproj.sInfoDevSistema1;
         RecProj.sUsuario := qr.FieldByName('USU_002').AsString;
         RecProj.iUsuario := qr.FieldByName('USU_001').AsInteger;
         RecProj.sLoginUsuario := sUsuario;
 
 
-        if uppercase(qrEmpresa.FieldByName('identificador').AsString)='ELITEFOOD' THEN  // Claudio São Paulo
+        if uppercase(qrEmpresa.FieldByName('identificador').AsString)='Infor Restaurante Bar' THEN  // Claudio São Paulo
         begin
 
 
@@ -167,10 +169,10 @@ begin
         Result := True;
         if uppercase(qrEmpresa.FieldByName('identificador').AsString)='ELITE STORY' THEN  // Claudio São Paulo
         begin
-          RecProj.sSoftwareHouse := 'ELITEFOOD';
+          RecProj.sSoftwareHouse := 'Infor Restaurante Bar';
         end
         else
-          RecProj.sSoftwareHouse := 'ELITEFOOD';
+          RecProj.sSoftwareHouse := 'Infor Restaurante Bar';
         Result := True;
 
       end;
@@ -262,7 +264,7 @@ end;
 procedure TfrmLogin.FormCreate(Sender: TObject);
 begin
   try    // Carrega a imagem, conforme o diretorio e o nome do arquivo
-    imgLogin.Picture.LoadFromFile(ExtractFilePath(Application.ExeName)+'\imagens\fundologin.jpg');
+    //imgLogin.Picture.LoadFromFile(ExtractFilePath(Application.ExeName)+'\imagens\fundologin.jpg');
     except end;
      lbVersao.Caption := 'Versão ' + GetFileVersion(ParamStr(0));
 end;

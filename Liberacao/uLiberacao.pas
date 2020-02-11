@@ -59,6 +59,7 @@ type
     Label10: TLabel;
     lbNomeSistema: TLabel;
     lbDescritivo: TLabel;
+    Label9: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
@@ -218,10 +219,10 @@ begin
   begin
     RESTRequest1.ResetToDefaults;
 
-    if uppercase( copy(frmmenu.Caption, 1, 9))='GRCONTROL'  then
-      RESTClient1.BaseURL   := 'http://grsolution.com.br/license/api/v1/computador/show/'
+    if uppercase( copy(frmmenu.Caption, 1, 9))='Sistema'  then
+      RESTClient1.BaseURL   := 'http://meusite.com.br/license/api/v1/computador/show/'
     else
-      RESTClient1.BaseURL   := 'http://rpsistema.com.br/license/api/v1/computador/show/';  // Faz liberação do site
+      RESTClient1.BaseURL   := 'http://meusite.com.br/license/api/v1/computador/show/';  // Faz liberação do site
 
     RESTRequest1.Resource := '{serial}';
     RESTRequest1.Params.AddUrlSegment('serial',txtSerialHd.Text);
@@ -289,13 +290,13 @@ end;
 
 procedure TfrmLiberacao.FormShow(Sender: TObject);
 begin
-  if uppercase( copy(frmmenu.Caption, 1, 9))='GRCONTROL'  then
+  if uppercase( copy(frmmenu.Caption, 1, 9))='sistema'  then
   begin
-    lbNomeSistema.Caption:= 'GrControl ' + GetFileVersion(ParamStr(0));
+    lbNomeSistema.Caption:= 'sistema' + GetFileVersion(ParamStr(0));
     lbDescritivo.Caption:='Esta versão do sistema não está liberada para uso neste computador' + sLineBreak+
-                          'Obtenha com a Gr Solution o código de ativação' + sLineBreak+
-                          '(85) 988024258  fixo (85) 3224-6638 '+sLineBreak+
-                          'CONTATO@GRSOLUTION.COM.BR'
+                          'Obtenha com a Sistema o código de ativação' + sLineBreak+
+                          '(contato '+sLineBreak+
+                          'CONTATO@.COM.BR'
   end
   else
     lbNomeSistema.Caption:= lbNomeSistema.Caption + ' '+ GetFileVersion(ParamStr(0))

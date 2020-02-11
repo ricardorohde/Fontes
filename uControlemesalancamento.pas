@@ -310,6 +310,8 @@ type
     procedure acSalvarFecharExecute(Sender: TObject);
     procedure ACBrBAL1LePeso(Peso: Double; Resposta: AnsiString);
     procedure acTransferenciamesacomandaExecute(Sender: TObject);
+    procedure FecharF31Click(Sender: TObject);
+    procedure edCodProdutoKeyPress(Sender: TObject; var Key: Char);
   private
     numero: Integer;
     bAgruparItensIguais: boolean;
@@ -950,6 +952,13 @@ begin
 
 end;
 
+procedure TfrmControlemesalancamento.edCodProdutoKeyPress(Sender: TObject;
+  var Key: Char);
+begin
+  inherited;
+If Key = #27 Then Close;
+end;
+
 procedure TfrmControlemesalancamento.edObservacaoItemEnter(Sender: TObject);
 begin
   if not qrBuscaItem.Active then
@@ -1015,7 +1024,7 @@ end;
 
 procedure TfrmControlemesalancamento.AtualizaTotalMesa(iVenda: Integer);
 begin
-  if qrBuscaItem.FieldByName('valor_total').AsFloat > 1 then
+ // if qrBuscaItem.FieldByName('valor_total').AsFloat > 1 then
     ExecutaComandoSQL('select fn_calcula_total_venda(:idvenda,:idempresa);',
       vararrayof([iVenda, recproj.iEmp]));
 end;
@@ -1199,6 +1208,12 @@ begin
   cbImpressora.Text := '';
   edCodProduto.SetFocus;
   edQuantidade.Enabled := true;
+end;
+
+procedure TfrmControlemesalancamento.FecharF31Click(Sender: TObject);
+begin
+  inherited;
+Close;
 end;
 
 procedure TfrmControlemesalancamento.FormCreate(Sender: TObject);
@@ -1590,6 +1605,8 @@ begin
       frmVendaItemFracionado.cdsItens.FieldByName('quantidade').AsFloat);
   end;
   frmVendaItemFracionado.Free;
+
+
 
   AtualizaTotalMesa(id_venda);
   qrVendaMesa.Refresh;

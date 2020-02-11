@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, JvExControls, JvLabel, dxGDIPlusClasses,
-  Vcl.ExtCtrls, AdvPanel, Vcl.StdCtrls;
+  Vcl.ExtCtrls, AdvPanel, Vcl.StdCtrls, frxDesgn, Vcl.Buttons;
 
 type
   TfrmChamaFiscal = class(TForm)
@@ -23,6 +23,8 @@ type
     imgECF: TImage;
     JvLabel4: TJvLabel;
     imgMFE: TImage;
+    frxDesigner1: TfrxDesigner;
+    btn1: TBitBtn;
     procedure imgSATClick(Sender: TObject);
     procedure imgNFCeClick(sender : TObject);
     procedure imgNaoFiscalClick(Sender: TObject);
@@ -33,6 +35,7 @@ type
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
+    procedure btn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -47,7 +50,13 @@ implementation
 
 {$R *.dfm}
 
-uses uFuncoes, uMenu;
+uses uFuncoes, uMenu, uControleMesaFechamento;
+
+procedure TfrmChamaFiscal.btn1Click(Sender: TObject);
+begin
+frmControleMesaFechamento.RepFechaConta.LoadFromFile('C:\EliteFood\Relatorios\FECHAMENTOMESA.fr3');
+    frmControleMesaFechamento.RepFechaConta.DesignReporT;
+end;
 
 procedure TfrmChamaFiscal.Button1Click(Sender: TObject);
 begin

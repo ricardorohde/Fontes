@@ -655,7 +655,7 @@ object frmRelatorioVendas: TfrmRelatorioVendas
     end
   end
   object RepVendasProdutos: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -1096,7 +1096,7 @@ object frmRelatorioVendas: TfrmRelatorioVendas
     end
   end
   object RepVendasProdutosNaoFiscal: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -1687,7 +1687,7 @@ object frmRelatorioVendas: TfrmRelatorioVendas
     Top = 144
   end
   object repAcrescimosVendasNaoFiscal: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -2091,7 +2091,7 @@ object frmRelatorioVendas: TfrmRelatorioVendas
     end
   end
   object repAcrescimosVendas: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -2648,7 +2648,7 @@ object frmRelatorioVendas: TfrmRelatorioVendas
     Top = 264
   end
   object repCFeEmitidos: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -3116,7 +3116,6 @@ object frmRelatorioVendas: TfrmRelatorioVendas
     Background = False
     HTMLTags = True
     Quality = 95
-    Transparency = False
     Author = 'FastReport'
     Subject = 'FastReport PDF export'
     ProtectionFlags = [ePrint, eModify, eCopy, eAnnot]
@@ -3126,7 +3125,6 @@ object frmRelatorioVendas: TfrmRelatorioVendas
     FitWindow = False
     CenterWindow = False
     PrintScaling = False
-    PdfA = False
     Left = 672
     Top = 160
   end
@@ -3188,7 +3186,7 @@ object frmRelatorioVendas: TfrmRelatorioVendas
     Top = 320
   end
   object repCaixinhaGarcons: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -3496,7 +3494,7 @@ object frmRelatorioVendas: TfrmRelatorioVendas
     Top = 568
   end
   object repComissao: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -3870,7 +3868,7 @@ object frmRelatorioVendas: TfrmRelatorioVendas
     Top = 432
   end
   object repComissaoDetalhado: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -4455,7 +4453,7 @@ object frmRelatorioVendas: TfrmRelatorioVendas
     end
   end
   object repNFe: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -5121,7 +5119,7 @@ object frmRelatorioVendas: TfrmRelatorioVendas
     Top = 24
   end
   object repVendaPagAntecipado: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -5673,7 +5671,7 @@ object frmRelatorioVendas: TfrmRelatorioVendas
     Top = 384
   end
   object repResumoFinanceiro: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -6255,7 +6253,7 @@ object frmRelatorioVendas: TfrmRelatorioVendas
     end
   end
   object repRetiradaesuprimentos: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -6713,7 +6711,7 @@ object frmRelatorioVendas: TfrmRelatorioVendas
     Top = 461
   end
   object repRecebimentosFormaPag: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -7027,7 +7025,7 @@ object frmRelatorioVendas: TfrmRelatorioVendas
     end
   end
   object rpRelprodutosvendidosfornecedor: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -7740,7 +7738,7 @@ object frmRelatorioVendas: TfrmRelatorioVendas
     end
   end
   object rpNotaentrada: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -8218,7 +8216,7 @@ object frmRelatorioVendas: TfrmRelatorioVendas
     end
   end
   object rpVendasporgarcom: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -8546,7 +8544,7 @@ object frmRelatorioVendas: TfrmRelatorioVendas
     Top = 568
   end
   object repListaProdutos: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -9035,7 +9033,7 @@ object frmRelatorioVendas: TfrmRelatorioVendas
     end
   end
   object repCPagar: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -9730,7 +9728,7 @@ object frmRelatorioVendas: TfrmRelatorioVendas
     end
   end
   object repCReceber: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -10354,7 +10352,7 @@ object frmRelatorioVendas: TfrmRelatorioVendas
     Top = 410
   end
   object repVendasLucro: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -10880,7 +10878,7 @@ object frmRelatorioVendas: TfrmRelatorioVendas
     Top = 536
   end
   object repProdValorizacao: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]

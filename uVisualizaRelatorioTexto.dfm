@@ -6,8 +6,9 @@ inherited frmVisualizaRelatorioTexto: TfrmVisualizaRelatorioTexto
   Constraints.MaxWidth = 450
   Constraints.MinHeight = 450
   Constraints.MinWidth = 450
+  ExplicitTop = -93
   ExplicitWidth = 450
-  ExplicitHeight = 540
+  ExplicitHeight = 539
   PixelsPerInch = 96
   TextHeight = 16
   inherited pnPrincipal: TAdvPanel

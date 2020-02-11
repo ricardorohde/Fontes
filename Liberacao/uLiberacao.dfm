@@ -3,7 +3,7 @@ object frmLiberacao: TfrmLiberacao
   Top = 0
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  Caption = 'SISTEMA DE LIBERA'#199#195'O OF-LINE'
+  Caption = 'SISTEMA DE LIBERA'#199#195'O OFFLINE'
   ClientHeight = 573
   ClientWidth = 596
   Color = clBtnFace
@@ -3549,12 +3549,26 @@ object frmLiberacao: TfrmLiberacao
   object lbNomeSistema: TLabel
     Left = 152
     Top = 30
-    Width = 286
+    Width = 283
     Height = 58
-    Caption = 'ELITE STORY'
+    Caption = 'Infor Sistema'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clNavy
     Font.Height = -48
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    Font.Quality = fqAntialiased
+    ParentFont = False
+  end
+  object Label9: TLabel
+    Left = 120
+    Top = 98
+    Width = 331
+    Height = 25
+    Caption = 'Contato: Whatsapp (82)99660-9427'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -21
     Font.Name = 'Tahoma'
     Font.Style = []
     Font.Quality = fqAntialiased
@@ -3800,7 +3814,7 @@ object frmLiberacao: TfrmLiberacao
       Alignment = taCenter
       Caption = 
         'Esta vers'#227'o do sistema n'#227'o est'#225' liberada para uso neste computad' +
-        'or'#13#10'Obtenha com ELITE STORY o c'#243'digo de ativa'#231#227'o.'
+        'or'#13#10'Entre em contato e obtenha o c'#243'digo de ativa'#231#227'o.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clNavy
       Font.Height = -19
@@ -3935,7 +3949,7 @@ object frmLiberacao: TfrmLiberacao
     HandleRedirects = True
     RaiseExceptionOn500 = False
     Left = 96
-    Top = 488
+    Top = 528
   end
   object RESTRequest1: TRESTRequest
     Client = RESTClient1
@@ -3956,7 +3970,7 @@ object frmLiberacao: TfrmLiberacao
     FieldDefs = <>
     ResponseJSON = RESTResponse1
     Left = 160
-    Top = 512
+    Top = 472
   end
   object DADOS: TFDMemTable
     Active = True

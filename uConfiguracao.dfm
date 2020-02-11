@@ -3,6 +3,7 @@ inherited frmConfiguracao: TfrmConfiguracao
   Caption = 'Configura'#231#245'es '
   ClientHeight = 649
   ClientWidth = 872
+  ExplicitTop = -284
   ExplicitWidth = 878
   ExplicitHeight = 673
   PixelsPerInch = 96
@@ -70,7 +71,7 @@ inherited frmConfiguracao: TfrmConfiguracao
     Top = 0
     Width = 872
     Height = 611
-    ActivePage = pgSATNFC
+    ActivePage = tsBackup
     Align = alClient
     TabOrder = 1
     object pgGeral: TTabSheet
@@ -8522,7 +8523,7 @@ inherited frmConfiguracao: TfrmConfiguracao
         object grpVenda: TGroupBox
           Left = 3
           Top = 341
-          Width = 778
+          Width = 770
           Height = 98
           Anchors = [akLeft, akTop, akRight]
           Caption = 'Impress'#227'o em produ'#231#227'o (Cozinha/Bar/Balc'#227'o)'
@@ -11216,6 +11217,15 @@ inherited frmConfiguracao: TfrmConfiguracao
       end
     end
   end
+  object Button2: TButton [3]
+    Left = 781
+    Top = 568
+    Width = 75
+    Height = 25
+    Caption = 'Ativar'
+    TabOrder = 2
+    OnClick = Button2Click
+  end
   inherited ActionList1: TActionList
     Left = 800
     Top = 112
@@ -11472,8 +11482,8 @@ inherited frmConfiguracao: TfrmConfiguracao
       ''
       'WHERE EMP_001 = :ID')
     AfterOpen = qrEmpresaAfterOpen
-    Left = 792
-    Top = 514
+    Left = 672
+    Top = 450
     ParamData = <
       item
         DataType = ftUnknown
@@ -11768,7 +11778,7 @@ inherited frmConfiguracao: TfrmConfiguracao
     Top = 560
   end
   object repTesteImpressao: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -11870,6 +11880,7 @@ inherited frmConfiguracao: TfrmConfiguracao
     Configuracoes.WebServices.AguardarConsultaRet = 0
     Configuracoes.WebServices.QuebradeLinha = '|'
     Configuracoes.WebServices.SSLType = LT_TLSv1_2
+    Configuracoes.RespTec.IdCSRT = 0
     Left = 792
     Top = 344
   end

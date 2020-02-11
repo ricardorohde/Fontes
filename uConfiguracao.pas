@@ -935,6 +935,7 @@ tEstadoEcfSimulado = (tpsLivre, tpsVenda, tpsSubTotal, tpsTotalPagar, tpsPagamen
     CheckBox1: TCheckBox;
     CheckBox2: TCheckBox;
     ckcartao: TCheckBox;
+    Button2: TButton;
     procedure btCancelarClick(Sender: TObject);
     procedure btConfirmarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -1067,6 +1068,7 @@ tEstadoEcfSimulado = (tpsLivre, tpsVenda, tpsSubTotal, tpsTotalPagar, tpsPagamen
     procedure btLogoClick(Sender: TObject);
     procedure ckTaxadeliverypadraoClick(Sender: TObject);
     procedure ckAtivarNFCEClick(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     procedure VerificaSuporteESCPOS();
     procedure CarregaModelosImpressora();
@@ -1102,7 +1104,8 @@ implementation
 {$R *.dfm}
 
 uses uMenu, Funcoes_XE, uFuncoes, uBuscaRegistro, Funcao_DB,Comunicador, untConstSAT, uLogAparelhoSAT,
-  uPosPrinterTeste, uNFeSelecionarCertificado, uVinculacaomesaeambiente;
+  uPosPrinterTeste, uNFeSelecionarCertificado, uVinculacaomesaeambiente,
+  uLiberacao;
 
 { TfrmConfiguracao }
 
@@ -3411,6 +3414,12 @@ begin
 end;
 
 
+
+procedure TfrmConfiguracao.Button2Click(Sender: TObject);
+begin
+      frmLiberacao := tfrmLiberacao.Create(self);
+      frmLiberacao.ShowModal;
+end;
 
 procedure TfrmConfiguracao.CarregaModelosImpressora;
 var

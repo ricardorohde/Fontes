@@ -2047,7 +2047,7 @@ var
   str_sql: string;
   qraux2: TUniQuery;
 begin
-  ShowMessage('Tel: (17)99606-4615');
+  ShowMessage('Central: WHATSAPP (82) 99660-9427 OU (82)99696-7906 INFOR SISTEMAS');
  { str_sql := ' select identificador from empresas where  emp_001=:emp';
   qrAux2 := TUniQuery.Create(self);
   qrAux2.Connection := frmMenu.conexao;
@@ -3248,8 +3248,8 @@ begin
   tmStatusTimer(nil);
   TmImpMobile.Enabled := true;
   try
-//    imgLOGO.Picture.LoadFromFile(ExtractFilePath(application.ExeName) +
-//      '\imagens\FUNDO.jpg');
+    imgLOGO.Picture.LoadFromFile(ExtractFilePath(application.ExeName) +
+      '\imagens\FUNDO.PNG');
   except
   end;
   verifica_modulo_sistema;
@@ -3361,6 +3361,7 @@ procedure TfrmMenu.TmImpMobileTimer(Sender: TObject);
 var
   imprime_cozinha: boolean;
 begin
+
   imprime_cozinha := LerBooleanConfig('CKIMPRIMEPEDIDOSCOZINHA',
     cdsCFG.filename);
 
@@ -3387,7 +3388,9 @@ var
   i_filtro_imp, quantidade_vias, I, largura_colunas, largura_colunas_expandido,
     largura_aux: integer;
 begin
-  bImprimeDestaque := LerBooleanConfig('CKIMPRIMEDESTAQUE',cdsCFG.filename);
+
+ bImprimeDestaque := LerBooleanConfig('CKIMPRIMEDESTAQUE',cdsCFG.filename);
+
   bImprimeIngrMesa := LerBooleanConfig('CKIMPRIMIRINGREDIENTESCOZINHAMESA',
     cdsCFG.filename);
   bImprimeIngrDelivery := LerBooleanConfig
@@ -3502,17 +3505,17 @@ begin
           end;
         4:
           begin
-            sImpressora := LerStringConfig('CAMIMPCOZINHA2',
+            sImpressora := LerStringConfig('COZINHA',
               frmMenu.cdsCFG.filename);
-            sImpressoraPOS := 'SALAO';
+            sImpressoraPOS := 'COZINHA';
             largura_colunas := lerintegerconfig('COLUNAS',
               ExtractFilePath(application.ExeName) + 'CONF\IMP_SALAO.xml');
           end;
         5:
           begin
-            sImpressora := LerStringConfig('CAMIMPBAR2',
+            sImpressora := LerStringConfig('COZINHA',
               frmMenu.cdsCFG.filename);
-            sImpressoraPOS := 'AMBIENTE';
+            sImpressoraPOS := 'COZINHA';
             largura_colunas := lerintegerconfig('COLUNAS',
               ExtractFilePath(application.ExeName) + 'CONF\IMP_AMBIENTE.xml');
           end;
@@ -3574,12 +3577,16 @@ begin
           not modo_pos_balcao) or
           ((qr_aux1.FieldByName('ITE_013').AsInteger = 2) and
           not modo_pos_cozinha) or
+          ((qr_aux1.FieldByName('ITE_013').AsInteger = 4) and
+          not modo_pos_cozinha) or
+          ((qr_aux1.FieldByName('ITE_013').AsInteger = 5) and
+          not modo_pos_cozinha) or
           ((qr_aux1.FieldByName('ITE_013').AsInteger = 3) and not modo_pos_bar)
         then
         begin
           repImpressaoCozinha.PrintOptions.Printer := sImpressora;
           repImpressaoCozinha.Variables['sDataHora'] := QuotedStr(str_datahora);
-          //repImpressaoCozinha.LoadFromFile('C:\EliteFood\Relatorios\IMPRESSAOCOZINHA.fr3');
+          repImpressaoCozinha.LoadFromFile('C:\EliteFood\Relatorios\IMPRESSAOCOZINHA.fr3');
           repImpressaoCozinha.PrepareReport;
 
           for I := 1 to quantidade_vias do
@@ -3868,15 +3875,15 @@ begin
       RecProj.dCaixaDataAbertura), formatdatetime('hh:nn',
       RecProj.dCaixaHoraAbertura)]);
   end;
-
-  str_liberacao := 'VALIDADE DA LICENÇA: ' + formatdatetime('dd/mm/yyyy',
-    RecProj.dValidadeLiberacao);
+ // str_liberacao := 'VALIDADE DA LICENÇA: ' + formatdatetime('dd/mm/yyyy',
+   // RecProj.dValidadeLiberacao);
+  str_liberacao := 'VALIDADE DA LICENÇA: VITALICIA';
   StatusBar1.Panels[0].Text := str_liberacao;
   StatusBar1.Panels[1].Text := RecProj.sUsuario;
   StatusBar1.Panels[2].Text := 'SERVIDOR: ' + conexao.Server;
   StatusBar1.Panels[3].Text := 'PC LOCAL: ' + NomeDoTerminal;
   StatusBar1.Panels[4].Text := str_aux;
-  StatusBar1.Panels[5].Text := RecProj.sEmp;
+  StatusBar1.Panels[5].Text := 'Infor Sistemas (82)99660-9427';//RecProj.sEmp;
 end;
 
 procedure TfrmMenu.SadaRetirada1Click(Sender: TObject);

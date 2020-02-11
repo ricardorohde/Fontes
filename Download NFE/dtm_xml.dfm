@@ -23,11 +23,11 @@ object dtmxml: Tdtmxml
     Configuracoes.Arquivos.PathNFe = '.\NFe'
     Configuracoes.Arquivos.PathInu = '.\Inu'
     Configuracoes.Arquivos.PathEvento = '.\Eventos'
-    Configuracoes.Arquivos.DownloadNFe.PathDownload = '.\Download'
     Configuracoes.WebServices.UF = 'ES'
     Configuracoes.WebServices.Ambiente = taProducao
     Configuracoes.WebServices.AguardarConsultaRet = 0
     Configuracoes.WebServices.QuebradeLinha = '|'
+    Configuracoes.RespTec.IdCSRT = 0
     DANFE = ACBrNFeDANFeRL1
     Left = 304
     Top = 72

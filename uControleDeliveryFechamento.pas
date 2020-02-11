@@ -27,7 +27,7 @@ uses
   dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
   dxSkinTheAsphaltWorld, dxSkinValentine, dxSkinVisualStudio2013Blue,
   dxSkinVisualStudio2013Dark, dxSkinVisualStudio2013Light, dxSkinVS2010,
-  dxSkinWhiteprint, dxSkinXmas2008Blue, ACBrTEFDClass;
+  dxSkinWhiteprint, dxSkinXmas2008Blue, ACBrTEFDClass, Vcl.Buttons;
 
 type
   TfrmControleDeliveryFechamento = class(TForm)
@@ -308,6 +308,7 @@ type
     qrFormacnpjcred: TWideStringField;
     qrFormab_tef: TBooleanField;
     qrFormabandeira_cartao: TWideStringField;
+    btn1: TBitBtn;
     constructor Create (Sender : TComponent ; id_venda: integer; concluir_venda : boolean = false);
     procedure este1Click(Sender: TObject);
     procedure teste21Click(Sender: TObject);
@@ -354,6 +355,7 @@ type
     procedure acAbrirGavetaExecute(Sender: TObject);
     procedure AtualizaNumeroCupom(id_venda : integer);
     procedure chamaTef(cnpjCred, bandeira, campo, numVenda : string; valorInformado : currency);
+    procedure btn1Click(Sender: TObject);
   private
     { Private declarations }
     bTaxaAdicional, bImprimeCupomFechamento, bUtilizaGaveta,
@@ -478,6 +480,7 @@ begin
       else
         RepFechaConta.Variables['sMensagemRetBalcao'] := QuotedStr('RETIRADA NO BALCÃO');
     end;
+    RepFechaConta.LoadFromFile('C:\EliteFood\Relatorios\IMPRESSAODELIVERY.fr3');
     RepFechaConta.PrepareReport;
     for I := 1 to numero_vias do RepFechaConta.Print;
   end;
@@ -1094,6 +1097,12 @@ end;
 procedure TfrmControleDeliveryFechamento.btFiadoClick(Sender: TObject);
 begin
   insereParcela(btFiado.Tag, 'FIADO', edValorPagamento.Value, edNroAutorizacao.Text, false, false, true);
+end;
+
+procedure TfrmControleDeliveryFechamento.btn1Click(Sender: TObject);
+begin
+RepFechaConta.LoadFromFile('C:\EliteFood\Relatorios\IMPRESSAODELIVERY.fr3');
+RepFechaConta.DesignReporT;
 end;
 
 procedure TfrmControleDeliveryFechamento.btOutrosClick(Sender: TObject);

@@ -472,7 +472,7 @@ begin
   qraux := TUniQuery.Create(self);
   qraux.Connection := frmMenu.conexao;
   str_sql :=
-    format('select coalesce(ven_029, 0)+1 from venda where ven_024=''B'' and emp_001=%d order by ven_001 desc',
+    format('select coalesce(numero_cupom, 0)+1 from venda where ven_024=''B'' and emp_001=%d order by ven_001 desc',
     [recproj.iEmp]);
   ExecutaConsultaSQL(qraux, str_sql);
   if qraux.RecordCount > 1 then

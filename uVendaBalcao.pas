@@ -261,7 +261,8 @@ uses
   uMenu, Funcao_DB, uFuncoes, uBuscaRegistro, uControleMesaItensAcoes,
   uPDVFechamento, uPDVCliente, uVendaSelecaoPreco, uVendaItemFracionado,
   uVendaSelecaoTamanho, uVendaSelecaoVendedor, uControleDelivery, uPDV,
-  uControleMesaUtilitarios, uDetalheCliente, uPesquisavendabalcao;
+  uControleMesaUtilitarios, uDetalheCliente, uPesquisavendabalcao,
+  uControleMesaFechamento;
 
 function TfrmVendaBalcao.NovoNumeroVenda: integer;
 var
@@ -270,7 +271,7 @@ var
 begin
   qraux := Tuniquery.Create(self);
   qraux.Connection := frmMenu.conexao;
-  str_sql := format('select coalesce(ven_029, 0)+1 from venda where ven_024=''B'' and emp_001=%d order by ven_001 desc', [recproj.iEmp]);
+  str_sql := format('select coalesce(numero_cupom, 0)+1 from venda where ven_024=''B'' and emp_001=%d order by ven_001 desc', [recproj.iEmp]);
   ExecutaConsultaSQL(qraux, str_sql);
   if qraux.RecordCount > 1 then
     result := qraux.Fields[0].asinteger
@@ -585,12 +586,15 @@ begin
 
     if (edValor.Enabled or edQuantidade.Enabled) and (not inserir) then
     begin
-      if edQuantidade.CanFocus then
-        edQuantidade.SetFocus
-      else if edValor.canfocus then
-        edValor.setfocus
+      inserir := false;
+
+      if edValor.CanFocus then
+          edValor.SetFocus
       else
-        inserir := true;
+      if edQuantidade.canfocus then
+        edQuantidade.setfocus
+      else
+            inserir := true;
     end
     else
       inserir := true;
@@ -602,15 +606,77 @@ begin
   else
   begin
     b_flag_busca_valida := false;
-    edCodProduto.Clear;
+
   end;
+  edCodProduto.Clear;
 
 end;
 
 procedure TfrmVendaBalcao.edCodProdutoKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+var qtde,valor_promocao,valor_happy : double;
+    id_produto : integer;
+    inserir :boolean;
+    tecla_enter: word;
 begin
-  if Key = vk_return then
-    Perform(WM_NEXTDLGCTL, 0, 0);
+
+  if key= vk_return then
+  begin
+      tecla_enter := vk_return;
+    if trim(edCodProduto.Text)='' then exit;
+    if not qrVenda.active then acAberturaVenda.Execute;
+
+    if ValidaInsercaoProduto(trim(edCodProduto.Text), qtde, inserir) then
+    begin
+      b_flag_busca_valida:=true;
+      qrBuscaItem.Edit;
+      qrBuscaItem.FieldByName('quantidade').AsFloat :=qtde;
+
+
+
+      //Verifica Happy Hour - Bruno (12-04-2018)
+      if BuscaHappyHour('P', qrBuscaItem.FieldByName('id_material').AsInteger, valor_happy) then
+        qrBuscaItem.FieldByName('valor_unit').AsFloat:= valor_happy
+      else
+      begin
+        if bUtilizaSelecaoPrecos then
+        begin
+          frmVendaSelecaoPreco := TfrmVendaSelecaoPreco.Create(self,qrBuscaItem.FieldByName('id_material').asinteger);
+
+          if frmVendaSelecaoPreco.qrTamanhoMaterial.RecordCount > 1 then
+            frmVendaSelecaoPreco.ShowModal;
+
+          if frmVendaSelecaoPreco.Tag = 1 then
+          begin
+            qrBuscaItem.FieldByName('valor_unit').AsFloat := frmVendaSelecaoPreco.valor;
+          end;
+        end;
+      end;
+
+      if (edValor.Enabled or edQuantidade.Enabled) and (not inserir)  then
+      begin
+        inserir := false;
+
+
+        if edQuantidade.CanFocus then
+          edQuantidade.SetFocus
+        else
+          if edValor.canfocus then
+            edValor.setfocus
+          else
+            inserir := true;
+      end
+      else
+        inserir := true;
+
+      if inserir then
+      edObservacaoItemKeyDown(self, tecla_enter, []);
+    end
+    else
+    begin
+      b_flag_busca_valida := false;
+    end;
+    edCodProduto.Clear;
+  end;
 end;
 
 procedure TfrmVendaBalcao.edObservacaoItemKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
@@ -682,14 +748,22 @@ begin
 end;
 
 procedure TfrmVendaBalcao.edQuantidadeKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+var
+    tecla_enter: word;
 begin
   if Key = vk_return then
   begin
+    tecla_enter := vk_return;
     edQuantidade.Refresh;
     if b_flag_busca_valida and qrBuscaItem.Active and (qrVenda.State in [dsInsert, dsEdit]) then
-      Perform(WM_NEXTDLGCTL, 0, 0) //sai do controle para poder fazer as validações
-    else
+    begin
+      Perform(WM_NEXTDLGCTL, 0, 0); //sai do controle para poder fazer as validações
+      edObservacaoItemKeyDown(self, tecla_enter, []);
+    end;
       edCodProduto.SetFocus;
+      edValor.Text:= '0,00';
+    edQuantidade.Text:= '0,00';
+    qrBuscaItem.Close;
   end;
 end;
 
@@ -893,6 +967,7 @@ end;
 procedure TfrmVendaBalcao.acPesquisarItemExecute(Sender: TObject);
 var
   str_sql: string;
+  inserir :boolean;
 begin
   edCodProduto.SetFocus;
 
@@ -904,7 +979,22 @@ begin
   begin
     edCodProduto.Text := frmBuscaRegistro.valor_retorno;
     ;
-    Perform(WM_NEXTDLGCTL, 0, 0);
+    //Perform(WM_NEXTDLGCTL, 0, 0);
+    if (edValor.Enabled or edQuantidade.Enabled) and (not inserir)  then
+      begin
+        inserir := false;
+
+
+        if edQuantidade.CanFocus then
+          edQuantidade.SetFocus
+        else
+          if edValor.canfocus then
+            edValor.setfocus
+          else
+            inserir := true;
+      end
+      else
+        inserir := true;
   end;
   frmBuscaRegistro.Free;
 end;
@@ -956,10 +1046,15 @@ var
   id_venda: integer;
   str_sql: string;
 begin
-  id_venda := qrvenda.FieldByName('ven_001').AsInteger;
-  frmPDVFechamento := TfrmPDVFechamento.Create(self, id_venda);
-  frmPDVFechamento.ShowModal;
-  if frmPDVFechamento.Tag = 1 then
+  //id_venda := qrvenda.FieldByName('ven_001').AsInteger;
+  //frmPDVFechamento := TfrmPDVFechamento.Create(self, id_venda);
+  //frmPDVFechamento.ShowModal;
+
+  frmControleMesaFechamento := TfrmControleMesaFechamento.Create(self,
+      qrVenda.fieldbyname('ven_001').asinteger, true);
+    frmControleMesaFechamento.ShowModal;
+
+ { if frmPDVFechamento.Tag = 1 then
   begin
     if b_imprimir_cozinha then
     begin
@@ -973,7 +1068,25 @@ begin
     qrBuscaItem.Close;
     acAberturaVenda.Execute;
   end;
-  FreeAndNil(frmPDVFechamento);
+  FreeAndNil(frmPDVFechamento);  }
+  if frmControleMesaFechamento.Tag = 1 then
+    begin
+
+      if b_imprimir_cozinha then
+      begin
+        // envia os itens para impressão após o fechamento
+        str_sql :=
+          format('UPDATE VENDAITEM SET ITE_011 = ''S'' where VEN_001=%d and emp_001=%d and ite_008= ''N'' ',
+          [qrVenda.fieldbyname('ven_001').asinteger, recproj.iEmp]);
+        ExecutaComandoSQL(str_sql);
+      end;
+
+      qrVenda.close;
+      qrVendaItem.close;
+      qrBuscaItem.close;
+      acAberturaVenda.Execute;
+    end;
+    FreeAndNil(frmControleMesaFechamento);
 end;
 
 procedure TfrmVendaBalcao.acInsereProdutoFracionadoExecute(Sender: TObject);

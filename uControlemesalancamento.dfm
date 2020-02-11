@@ -952,6 +952,7 @@ inherited frmControlemesalancamento: TfrmControlemesalancamento
       StyleHot.LookAndFeel.NativeStyle = True
       TabOrder = 0
       OnExit = edCodProdutoExit
+      OnKeyPress = edCodProdutoKeyPress
       Width = 150
     end
     object edQuantidade: TJvValidateEdit
@@ -2031,7 +2032,6 @@ inherited frmControlemesalancamento: TfrmControlemesalancamento
       Appearance.ColorMirrorCheckedTo = 16768988
       Appearance.ColorMirrorDisabled = 11974326
       Appearance.ColorMirrorDisabledTo = 15921906
-      ExplicitLeft = 722
     end
   end
   object qrVendaItem: TUniQuery
@@ -3376,8 +3376,8 @@ inherited frmControlemesalancamento: TfrmControlemesalancamento
     Top = 321
   end
   object puPopupOpcoesItem: TPopupMenu
-    Left = 272
-    Top = 72
+    Left = 312
+    Top = 104
     object CancelaritemF31: TMenuItem
       Action = acCancelaItem
       Visible = False

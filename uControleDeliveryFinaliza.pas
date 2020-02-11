@@ -7,7 +7,8 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, cxGraphics, cxControls, cxLookAndFeels,
   cxLookAndFeelPainters, cxContainer, cxEdit, cxTextEdit, cxCurrencyEdit,
   cxDBEdit, Data.DB, Vcl.StdCtrls, Vcl.DBCtrls, AdvGroupBox, MemDS, DBAccess,
-  Uni, AdvGlowButton, Vcl.ExtCtrls, AdvPanel, uControleDeliveryFechamento;
+  Uni, AdvGlowButton, Vcl.ExtCtrls, AdvPanel, uControleDeliveryFechamento,
+  Vcl.Buttons;
 
 type
   TfrmControleDeliveryFinaliza = class(TForm)
@@ -69,6 +70,7 @@ type
     MemoCupomTEF1: TMemo;
     MemoCupomTEF3: TMemo;
     MemoCupomTEF2: TMemo;
+    btn1: TBitBtn;
     procedure btCancelaClick(Sender: TObject);
     procedure btConfirmaClick(Sender: TObject);
     constructor Create(sender : Tcomponent ; id_venda : integer);
